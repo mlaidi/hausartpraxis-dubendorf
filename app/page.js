@@ -201,6 +201,7 @@ export default function HomePage() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [openFaq, setOpenFaq] = useState(null);
+  const [showAllSchwerpunkte, setShowAllSchwerpunkte] = useState(false);
 
   useScrollDepth();
 
@@ -804,13 +805,60 @@ export default function HomePage() {
             <div>
               <h4>Navigation</h4>
               {NAV_LINKS.map((l) => <div key={l.id} className="footerLink" onClick={() => scrollTo(l.id)}>{l.label}</div>)}
-              <h4 style={{ marginTop: 24 }}>Schwerpunkte</h4>
+              <h4 style={{ marginTop: 24, marginBottom: 10 }}>Schwerpunkte</h4>
               <Link href="/hausarzt-duebendorf" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Hausarzt Dübendorf</Link>
-              <Link href="/hausarzt-stettbach" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Hausarzt Stettbach</Link>
-              <Link href="/check-up-fahreignung-duebendorf" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Check-up & Fahreignung</Link>
               <Link href="/leistungen/notfallpraxis-walk-in" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Walk-in Notfallpraxis</Link>
-              <Link href="/leistungen/urologie" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Urologische Sprechstunde</Link>
-              <Link href="/leistungen/naturmedizin" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Naturmedizin & Infusionen</Link>
+              
+              <div style={{
+                maxHeight: showAllSchwerpunkte ? '280px' : '0px',
+                overflow: 'hidden',
+                transition: 'max-height 0.3s ease, opacity 0.25s ease',
+                opacity: showAllSchwerpunkte ? 1 : 0,
+              }}>
+                <Link href="/hausarzt-stettbach" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Hausarzt Stettbach</Link>
+                <Link href="/check-up-fahreignung-duebendorf" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Check-up & Fahreignung</Link>
+                <Link href="/leistungen/urologie" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Urologische Sprechstunde</Link>
+                <Link href="/leistungen/naturmedizin" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Naturmedizin & Infusionen</Link>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setShowAllSchwerpunkte(!showAllSchwerpunkte)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  padding: '6px 0',
+                  color: 'var(--teal-light, #3ca1de)',
+                  fontFamily: 'inherit',
+                  fontSize: 12,
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  transition: 'opacity 0.2s',
+                }}
+                onMouseOver={(e) => { e.currentTarget.style.opacity = '0.75'; }}
+                onMouseOut={(e) => { e.currentTarget.style.opacity = '1'; }}
+              >
+                <span>{showAllSchwerpunkte ? '– Weniger anzeigen' : '+ Weitere anzeigen'}</span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  style={{
+                    transform: showAllSchwerpunkte ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.25s ease',
+                  }}
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
             </div>
 
             {/* Col 3 – Leistungen (clickable!) */}
