@@ -402,74 +402,11 @@ export default function RootLayout({ children }) {
         <meta name="geo.position" content="47.3970;8.6180" />
         <meta name="ICBM" content="47.3970, 8.6180" />
         <meta name="google-site-verification" content="9wmTYpxeLxDDxqCHWLdWPRAbZrIR7hp51DD1jQ-yxe8" />
-        <link rel="canonical" href="https://hausarztpraxis-duebendorf.ch" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorsSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `[
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Hausarztpraxis Dübendorf",
-    "url": "https://hausarztpraxis-duebendorf.ch/",
-    "telephone": "+41 44 820 10 20",
-    "description": "Ihre moderne Hausarztpraxis in Dübendorf. Wir bieten Allgemeinmedizin, Naturmedizin und Notfallbehandlungen (Walk-in) an.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Leepüntstrasse 5",
-      "addressLocality": "Dübendorf",
-      "postalCode": "8600",
-      "addressCountry": "CH"
-    },
-    "medicalSpecialty": "PrimaryCare"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Kann ich als Notfall ohne Termin in die Praxis kommen (Walk-in)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja! Für akute medizinische Probleme und Notfälle bieten wir kurzfristige Termine an. Sie können als Walk-in Patient vorbeikommen. Ein kurzer Anruf vorab hilft uns, die Wartezeiten für Sie so kurz wie möglich zu halten."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bieten Sie neben der Schulmedizin auch Naturmedizin an?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, wir verfolgen einen ganzheitlichen Ansatz. Neben der klassischen Allgemeinmedizin bieten wir in Dübendorf auch Naturheilverfahren und Akupunktur an."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Nehmen Sie noch neue Patienten in Dübendorf auf?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, wir heißen neue Patienten in unserer Hausarztpraxis herzlich willkommen."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. med. Saskia Rodriguez",
-    "url": "https://hausarztpraxis-duebendorf.ch/",
-    "medicalSpecialty": "General Practice"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. med. Koller",
-    "url": "https://hausarztpraxis-duebendorf.ch/",
-    "medicalSpecialty": "General Practice"
-  }
-]` }} />
         <link rel="preload" as="image" href="/images/banner-640w.webp" fetchPriority="high" media="(min-width: 901px)" />
       </head>
       <body className={`${dmSerifDisplay.variable} ${inter.variable} ${playfairDisplay.variable} ${sourceSans3.variable}`}>

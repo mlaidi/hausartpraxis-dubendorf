@@ -3,6 +3,9 @@ import Link from 'next/link';
 export const metadata = {
   title: "Notfallarzt & Walk-in Praxis Dübendorf | Ohne Termin",
   description: "Arzt ohne Termin in Dübendorf gesucht? Unsere Notfallpraxis bietet kurzfristige Termine bei akuten Beschwerden. Nahe Stettbach. Jetzt anrufen oder vorbeikommen.",
+  alternates: {
+    canonical: "/leistungen/notfallpraxis-walk-in",
+  },
 };
 
 export default function NotfallpraxisPage() {
@@ -25,9 +28,39 @@ export default function NotfallpraxisPage() {
     ]
   };
 
+  const emergencySchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Notfallpraxis & Walk-in Dübendorf – Hausarztpraxis Dübendorf",
+    "url": "https://hausarztpraxis-duebendorf.ch/leistungen/notfallpraxis-walk-in",
+    "telephone": "+41 44 820 10 20",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Leepüntstrasse 5",
+      "addressLocality": "Dübendorf",
+      "postalCode": "8600",
+      "addressCountry": "CH"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Saturday"],
+        "opens": "09:00",
+        "closes": "13:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Saturday"],
+        "opens": "14:00",
+        "closes": "18:00"
+      }
+    ]
+  };
+
   return (
     <main role="main" style={{ maxWidth: 800, margin: '4rem auto', padding: '0 1rem', fontFamily: 'var(--font-inter), sans-serif' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencySchema) }} />
       <Link href="/" style={{ color: '#005b4f', textDecoration: 'none', marginBottom: '2rem', display: 'inline-block', fontWeight: 'bold' }}>&larr; Zurück zur Startseite</Link>
       
       <h1 style={{ fontSize: '2.5rem', color: '#005b4f', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif', lineHeight: 1.2 }}>

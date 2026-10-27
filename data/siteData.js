@@ -151,7 +151,7 @@ export const TEAM = [
     initials: "AA",
     photo: "/images/team/Dr. Awad.webp",
     photoSrcSet: "/images/team/Dr. Awad-240w.webp 240w, /images/team/Dr. Awad-360w.webp 360w, /images/team/Dr. Awad.webp 480w",
-    bio: "A. Abuawad ist diplomierter Arzt für Allgemeinmedizin und leitet die Hausarztpraxis Zürich Altstetten seit ihrer Gründung im Jahr 2003. Mit über 20 Jahren Erfahrung in der Grundversorgung betreut er Patientinnen und Patienten aller Altersgruppen. Sein Schwerpunkt liegt auf der ganzheitlichen Betreuung, Prävention und der persönlichen Arzt-Patient-Beziehung.",
+    bio: "A. Abuawad ist diplomierter Arzt für Allgemeinmedizin und leitet die Hausarztpraxis Dübendorf sowie den Verbund Praxen Jerumed. Mit über 20 Jahren Erfahrung in der Grundversorgung betreut er Patientinnen und Patienten aller Altersgruppen. Sein Schwerpunkt liegt auf der ganzheitlichen Betreuung, Prävention und der persönlichen Arzt-Patient-Beziehung.",
     languages: "Deutsch, Arabisch",
   },
   {

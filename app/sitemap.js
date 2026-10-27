@@ -4,14 +4,17 @@ export default function sitemap() {
 
   const staticPages = [
     '',
-    '/impressum',
-    '/datenschutz',
-    '/cookies',
-    '/leistungen/naturmedizin',
+    '/hausarzt-duebendorf',
+    '/hausarzt-stettbach',
+    '/check-up-fahreignung-duebendorf',
     '/leistungen/notfallpraxis-walk-in',
     '/leistungen/urologie',
+    '/leistungen/naturmedizin',
     '/team/awad-abuawad',
-    '/team/saskia-rodriguez'
+    '/team/saskia-rodriguez',
+    '/impressum',
+    '/datenschutz',
+    '/cookies'
   ];
 
   return staticPages.map((route) => ({

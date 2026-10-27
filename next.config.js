@@ -19,8 +19,15 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Host redirection: www to non-www
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.hausarztpraxis-duebendorf.ch' }],
+        destination: 'https://hausarztpraxis-duebendorf.ch/:path*',
+        permanent: true,
+      },
       // Old content pages
-      { source: '/team/:path*', destination: '/#team', permanent: true },
+      { source: '/team', destination: '/#team', permanent: true },
       { source: '/kontakt', destination: '/#contact', permanent: true },
       { source: '/kontakt/:path*', destination: '/#contact', permanent: true },
       { source: '/news/:path*', destination: '/', permanent: true },

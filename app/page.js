@@ -800,10 +800,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Col 2 – Navigation */}
+            {/* Col 2 – Navigation & Schwerpunkte */}
             <div>
               <h4>Navigation</h4>
               {NAV_LINKS.map((l) => <div key={l.id} className="footerLink" onClick={() => scrollTo(l.id)}>{l.label}</div>)}
+              <h4 style={{ marginTop: 24 }}>Schwerpunkte</h4>
+              <Link href="/hausarzt-duebendorf" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Hausarzt Dübendorf</Link>
+              <Link href="/hausarzt-stettbach" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Hausarzt Stettbach</Link>
+              <Link href="/check-up-fahreignung-duebendorf" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Check-up & Fahreignung</Link>
+              <Link href="/leistungen/notfallpraxis-walk-in" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Walk-in Notfallpraxis</Link>
+              <Link href="/leistungen/urologie" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Urologische Sprechstunde</Link>
+              <Link href="/leistungen/naturmedizin" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Naturmedizin & Infusionen</Link>
             </div>
 
             {/* Col 3 – Leistungen (clickable!) */}
