@@ -1,0 +1,147 @@
+/* ══════════════════════════════════════════════
+   Hausarztpraxis Duebendorf – Global Styles
+   Swiss Clinical Premium Design System
+   ══════════════════════════════════════════════ */
+
+:root {
+  /* ── Brand Colors — Medical Blue & Vitality Green ── */
+  --teal-light:       #1a7caf;   /* WCAG AA blue — 4.7:1 contrast with white text          */
+  --teal-dark:        #15366C;   /* Bleu foncé  — deep authoritative navy, trust            */
+  --teal-mid:         #1a6fa3;   /* Bleu intermédiaire — WCAG AA on white (5.1:1)           */
+  --teal-pale:        #EBF5FC;   /* Pale blue tint — subtle section backgrounds             */
+  --teal-mint:        #F2F8FD;   /* Almost-white blue — lightest bg tint                   */
+  --accent-green:     #229E54;   /* Vert vitalité — softer, elegant clinical green          */
+  --accent-green-dark:#16733B;   /* Deep rich clinical green, extremely pleasant to read    */
+  --grey:             #5a6a82;   /* Blue-grey — elegant neutral with blue undertone         */
+  --grey-light:       #8fa3be;   /* Light blue-grey accents                                */
+  --grey-pale:        #f0f4f8;   /* Very pale blue-grey                                    */
+
+  /* ── Legacy aliases (keep components working) ── */
+  --navy:        #15366C;   /* = teal-dark, authoritative headings                     */
+  --navy-dark:   #0c2040;   /* Very deep navy — darkest backgrounds                    */
+  --green:       #229E54;   /* accent-green alias                                      */
+  --green-dark:  #16733B;
+  --green-light: #229E54;
+  --green-pale:  #E8F7EE;   /* Beautiful pale green background                         */
+  --green-mint:  #F4FCF7;   /* Almost white clinical mint bg                           */
+
+  /* ── Neutrals ── */
+  --cream:       #f7fafc;
+  --warm-white:  #fafcfe;
+  --sand:        #daeaf8;   /* Pale blue-sand                                          */
+  --sand-light:  #eaf4fc;
+  --text:        #0c2040;   /* Deep navy for body text                                 */
+  --text-light:  #2a4a72;   /* Softer navy for secondary text                          */
+  --white:       #FFFFFF;
+  --border:      #c2ddf0;   /* Pale blue border                                        */
+
+  /* ── Swiss Background Layering Tokens ── */
+  --slate-50:    #f8fafc;
+  --slate-100:   #f1f5f9;
+  --slate-200:   #e2e8f0;
+
+  /* Fonts — Swiss Clinical Premium Pairing */
+  --f-head: var(--font-dm-serif), var(--font-playfair), Georgia, serif;
+  --f-body: var(--font-inter), var(--font-source-sans), system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--f-body);
+  color: var(--text);
+  background: var(--warm-white);
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--teal-dark);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
