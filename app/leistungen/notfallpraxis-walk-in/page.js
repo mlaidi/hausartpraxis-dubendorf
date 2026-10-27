@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Notfallarzt & Walk-in Praxis Dübendorf | Ohne Termin",
-  description: "Arzt ohne Termin in Dübendorf gesucht? Unsere Notfallpraxis bietet kurzfristige Termine bei akuten Beschwerden. Nahe Stettbach. Jetzt anrufen oder vorbeikommen.",
+  title: "Arzt ohne Termin Dübendorf | Walk-in Notfallpraxis Leepünt",
+  description: "Arzt ohne Termin in Dübendorf gesucht? Unsere Walk-in Notfallpraxis empfängt Sie bei akuten Beschwerden sofort ohne Voranmeldung. Auch samstags geöffnet.",
   alternates: {
     canonical: "/leistungen/notfallpraxis-walk-in",
   },
@@ -22,7 +22,7 @@ export default function NotfallpraxisPage() {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Notfallarzt & Walk-in Praxis",
+        "name": "Arzt ohne Termin & Walk-in Praxis",
         "item": "https://hausarztpraxis-duebendorf.ch/leistungen/notfallpraxis-walk-in"
       }
     ]
@@ -31,7 +31,7 @@ export default function NotfallpraxisPage() {
   const emergencySchema = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "name": "Notfallpraxis & Walk-in Dübendorf – Hausarztpraxis Dübendorf",
+    "name": "Arzt ohne Termin Dübendorf – Walk-in Notfallpraxis",
     "url": "https://hausarztpraxis-duebendorf.ch/leistungen/notfallpraxis-walk-in",
     "telephone": "+41 44 820 10 20",
     "address": {
@@ -64,7 +64,7 @@ export default function NotfallpraxisPage() {
       <Link href="/" style={{ color: '#005b4f', textDecoration: 'none', marginBottom: '2rem', display: 'inline-block', fontWeight: 'bold' }}>&larr; Zurück zur Startseite</Link>
       
       <h1 style={{ fontSize: '2.5rem', color: '#005b4f', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif', lineHeight: 1.2 }}>
-        Notfallarzt & Walk-in Praxis in Dübendorf
+        Arzt ohne Termin Dübendorf – Walk-in Notfallpraxis & Permanence
       </h1>
       
       <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#374151', marginBottom: '2.5rem' }}>

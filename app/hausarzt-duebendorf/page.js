@@ -93,6 +93,14 @@ export default function HausarztDuebendorfPage() {
           "@type": "Answer",
           "text": "Ja, bei akuten Erkrankungen oder Schmerzen empfangen wir Sie als Walk-in-Patient ohne Voranmeldung. Zur optimalen Koordination der Wartezeiten freuen wir uns über einen kurzen vorherigen Anruf unter 044 820 10 20."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Befindet sich die Praxis am Standort der ehemaligen Praxis Dr. Koller?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Die Hausarztpraxis Dübendorf befindet sich an der Leepüntstrasse 5 (am traditionsreichen Praxisstandort von Dr. Michael Koller). Bestehende Patientinnen und Patienten von Dr. Koller sowie neue Patientinnen und Patienten werden durch unser Praxisteam am gewohnten Standort nahtlos weiterbetreut."
+        }
       }
     ]
   };
@@ -198,6 +206,10 @@ export default function HausarztDuebendorfPage() {
         <div style={{ marginBottom: '1.5rem' }}>
           <h3 style={{ fontSize: '1.15rem', color: '#111827', marginBottom: '0.35rem' }}>Wo befindet sich die Praxis und wo kann man parkieren?</h3>
           <p style={{ color: '#4b5563', lineHeight: '1.6' }}>Die Praxis befindet sich an der Leepüntstrasse 5, 8600 Dübendorf. Parkmöglichkeiten stehen in der unmittelbaren Umgebung zur Verfügung, und die Haltestellen des öffentlichen Nahverkehrs sind nur wenige Gehminuten entfernt.</p>
+        </div>
+        <div style={{ marginBottom: '1.5rem' }}>
+          <h3 style={{ fontSize: '1.15rem', color: '#111827', marginBottom: '0.35rem' }}>Befindet sich die Praxis am Standort der ehemaligen Praxis Dr. Koller?</h3>
+          <p style={{ color: '#4b5563', lineHeight: '1.6' }}>Ja. Die Hausarztpraxis Dübendorf befindet sich an der Leepüntstrasse 5 (am traditionsreichen Praxisstandort von Dr. Michael Koller). Bestehende Patientinnen und Patienten von Dr. Koller sowie neue Patientinnen und Patienten werden durch unser Praxisteam am gewohnten Standort nahtlos weiterbetreut.</p>
         </div>
       </div>
 
