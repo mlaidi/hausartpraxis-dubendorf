@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Check-up & Fahreignungsabklärung Dübendorf | Hausarztpraxis",
@@ -86,12 +87,33 @@ export default function CheckUpFahreignungPage() {
       </Link>
 
       <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', color: '#005b4f', marginBottom: '1.25rem', fontFamily: 'var(--font-dm-serif), serif', lineHeight: 1.2 }}>
-        Check-up & Fahreignungsabklärung in Dübendorf
+        Check-up &amp; Fahreignungsabklärung in Dübendorf
       </h1>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '1.5rem 0 2rem', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Fahreignungsabklärung.webp"
+          alt="Medizinische Fahreignungsabklärung und Senioren-Kontrolluntersuchung in Dübendorf"
+          width={840}
+          height={400}
+          priority
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
 
       <p style={{ fontSize: '1.15rem', lineHeight: '1.75', color: '#374151', marginBottom: '2rem', fontWeight: '500' }}>
         Benötigen Sie eine verkehrsmedizinische Kontrolluntersuchung für das Strassenverkehrsamt oder möchten Sie Ihre Gesundheit mit einem gründlichen medizinischen Check-up überprüfen lassen? In der Hausarztpraxis Dübendorf an der Leepüntstrasse 5 bieten wir Ihnen professionelle Fahreignungsabklärungen (Stufe 1 und Stufe 2) sowie massgeschneiderte Vorsorgeuntersuchungen mit schneller Terminvergabe.
       </p>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Herzuntersuchung.webp"
+          alt="Kardiologische Diagnostik und Ruhe-EKG beim Gesundheits-Check-up in Dübendorf"
+          width={840}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
 
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>
         Fahreignungsuntersuchung nach Schweizer Richtlinien

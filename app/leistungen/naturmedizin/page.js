@@ -1,5 +1,6 @@
 import { NATURMEDIZIN } from '@/data/siteData';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Naturmedizin & Infusionstherapien Dübendorf | Longevity",
@@ -49,7 +50,19 @@ export default function NaturmedizinPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(therapySchema) }} />
       <Link href="/" style={{ color: '#005b4f', textDecoration: 'none', marginBottom: '2rem', display: 'inline-block', fontWeight: 'bold' }}>&larr; Zurück zur Startseite</Link>
-      <h1 style={{ fontSize: '2.5rem', color: '#005b4f', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>Naturmedizin & Longevity in Dübendorf</h1>
+      <h1 style={{ fontSize: '2.5rem', color: '#005b4f', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>Naturmedizin &amp; Longevity in Dübendorf</h1>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '1.5rem 0 2rem', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/prp-banner.webp"
+          alt="Regenerative Medizin, Eigenbluttherapie und Longevity in der Hausarztpraxis Dübendorf"
+          width={800}
+          height={400}
+          priority
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
+
       <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#374151', marginBottom: '2.5rem' }}>
         Ergänzend zur klassischen Schulmedizin bieten wir in der Hausarztpraxis Dübendorf ein wissenschaftlich fundiertes Spektrum an modernen Infusionstherapien, Eigenblutverfahren und Longevity-Behandlungen. Für mehr Energie, Vitalität und nachhaltige Zellgesundheit.
       </p>
@@ -62,6 +75,16 @@ export default function NaturmedizinPage() {
             <p style={{ fontWeight: 'bold', color: '#005b4f' }}>{item.price}</p>
           </div>
         ))}
+      </div>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2.5rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Eisenmangel.webp"
+          alt="Vitalstoff- und Eiseninfusionen für Zellgesundheit und Vitalität in Dübendorf"
+          width={800}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
       </div>
 
       <div style={{ padding: '2rem', backgroundColor: '#f0fdfa', borderRadius: '8px', border: '1px solid #ccfbf1' }}>

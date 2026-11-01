@@ -60,10 +60,6 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hausarzt Dübendorf | Arztpraxis & Permanence (Ohne Termin)",
-    description:
-      "Ihre Hausarztpraxis in Dübendorf. Wir bieten Termine und Notfallbehandlungen ohne Voranmeldung (Permanence). Willkommen auch für Patienten aus Stettbach, Wallisellen und Zürich.",
-    images: ["/og-image.webp"],
   },
   robots: {
     index: true,

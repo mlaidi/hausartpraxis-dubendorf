@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Hausarzt Stettbach | Arztpraxis & Walk-in nahe Bahnhof Stettbach",
@@ -90,9 +91,30 @@ export default function HausarztStettbachPage() {
         Hausarzt Stettbach – Schnelle medizinische Versorgung nahe Bahnhof Stettbach
       </h1>
 
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '1.5rem 0 2rem', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/banner.webp"
+          alt="Hausarztpraxis Dübendorf – Zentrale medizinische Versorgung für Patientinnen und Pendler aus Stettbach"
+          width={840}
+          height={400}
+          priority
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
+
       <p style={{ fontSize: '1.15rem', lineHeight: '1.75', color: '#374151', marginBottom: '2rem', fontWeight: '500' }}>
         Wohnen Sie in Stettbach, pendeln Sie täglich über den Bahnhof Stettbach oder arbeiten Sie im Einzugsgebiet Zürich-Schwamendingen und Dübendorf? Die Hausarztpraxis Dübendorf an der Leepüntstrasse 5 liegt nur wenige Minuten vom Verkehrsknotenpunkt Stettbach entfernt und bietet Ihnen eine erstklassige medizinische Grundversorgung mit Walk-in-Möglichkeit bei akuten Notfällen.
       </p>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Labor.webp"
+          alt="Modernes Praxislabor für Sofortanalysen bei Infekten und Notfällen nahe Stettbach"
+          width={840}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
 
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>
         Optimale Erreichbarkeit für Patientinnen & Pendler aus Stettbach

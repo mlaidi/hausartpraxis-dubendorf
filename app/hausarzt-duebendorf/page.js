@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Hausarzt Dübendorf | Hausarztpraxis & Grundversorgung",
@@ -116,12 +117,33 @@ export default function HausarztDuebendorfPage() {
       </Link>
 
       <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', color: '#005b4f', marginBottom: '1.25rem', fontFamily: 'var(--font-dm-serif), serif', lineHeight: 1.2 }}>
-        Ihr Hausarzt in Dübendorf – Moderne Grundversorgung & Walk-in Praxis
+        Ihr Hausarzt in Dübendorf – Moderne Grundversorgung &amp; Walk-in Praxis
       </h1>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '1.5rem 0 2rem', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/banner.webp"
+          alt="Hausarztpraxis Dübendorf – Empfang und Praxisräumlichkeiten an der Leepüntstrasse 5"
+          width={800}
+          height={400}
+          priority
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
 
       <p style={{ fontSize: '1.15rem', lineHeight: '1.75', color: '#374151', marginBottom: '2rem', fontWeight: '500' }}>
         Suchen Sie einen zuverlässigen, kompetenten Hausarzt in Dübendorf? Die Hausarztpraxis Dübendorf an der Leepüntstrasse 5 ist Ihre zentrale Anlaufstelle für die gesamte hausärztliche und allgemeinmedizinische Grundversorgung im Glattal. Wir verbinden bewährte Schulmedizin mit moderner technischer Diagnostik und einem ganzheitlichen Behandlungsansatz. Neue Patientinnen und Patienten sind bei uns jederzeit herzlich willkommen.
       </p>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Leistungen und Therapien.webp"
+          alt="Hausärztliche Betreuung, Behandlung und moderne Diagnostik in Dübendorf"
+          width={800}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
 
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>
         Umfassende hausärztliche Betreuung für alle Generationen

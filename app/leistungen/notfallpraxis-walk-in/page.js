@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: "Arzt ohne Termin Dübendorf | Walk-in Notfallpraxis Leepünt",
@@ -64,8 +65,19 @@ export default function NotfallpraxisPage() {
       <Link href="/" style={{ color: '#005b4f', textDecoration: 'none', marginBottom: '2rem', display: 'inline-block', fontWeight: 'bold' }}>&larr; Zurück zur Startseite</Link>
       
       <h1 style={{ fontSize: '2.5rem', color: '#005b4f', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif', lineHeight: 1.2 }}>
-        Arzt ohne Termin Dübendorf – Walk-in Notfallpraxis & Permanence
+        Arzt ohne Termin Dübendorf – Walk-in Notfallpraxis &amp; Permanence
       </h1>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '1.5rem 0 2rem', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Leistungen und Therapien.webp"
+          alt="Walk-in Notfallpraxis Dübendorf – Schnelle Erstversorgung und Arztkonsultation ohne Termin"
+          width={800}
+          height={400}
+          priority
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
       
       <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#374151', marginBottom: '2.5rem' }}>
         Unsere Praxis in Dübendorf ist darauf spezialisiert, Ihnen bei akuten medizinischen Notfällen sofortige und kompetente Hilfe zu leisten. Wenn Sie dringend einen Arzt ohne Termin benötigen, sind Sie bei uns richtig. Dank unserer Nähe zum Bahnhof Stettbach und Dübendorf Zentrum sind wir schnell und unkompliziert erreichbar.
@@ -95,6 +107,16 @@ export default function NotfallpraxisPage() {
       <p style={{ fontSize: '1.05rem', lineHeight: '1.6', color: '#4b5563', marginBottom: '3rem' }}>
         In einem Notfall zählt oft jede Minute. Unsere Praxis befindet sich an der Leepüntstrasse 5 und ist optimal an den öffentlichen Verkehr angebunden. Besonders vom nahen Verkehrsknotenpunkt Bahnhof Stettbach sowie aus dem gesamten Raum Dübendorf erreichen Sie uns in kürzester Zeit. Kostenlose Parkmöglichkeiten stehen direkt in der Nähe zur Verfügung.
       </p>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Hauseigene Apotheke.webp"
+          alt="Hauseigene Apotheke der Hausarztpraxis Dübendorf – Schnelle Abgabe von Notfallmedikamenten"
+          width={800}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+      </div>
 
       <div style={{ textAlign: 'center', marginTop: '2rem' }}>
         <a href="tel:+41448201020" style={{ 
