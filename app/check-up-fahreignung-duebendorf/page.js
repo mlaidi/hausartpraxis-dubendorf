@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const metadata = {
   title: "Check-up & Fahreignungsabklärung Dübendorf | Hausarztpraxis",
-  description: "Medizinische Check-ups & Fahreignungsabklärungen (Stufe 1 & 2) in Dübendorf. Vorsorge, Blutanalysen, EKG & Atteste für Senioren und Berufschauffeure. Jetzt buchen.",
+  description: "Medizinische Check-ups & Fahreignungsabklärungen (Stufe 1 & 2) in Dübendorf. Vorsorge, EKG & Atteste für Senioren und Chauffeure. Jetzt online buchen.",
   alternates: {
     canonical: "/check-up-fahreignung-duebendorf",
   },
@@ -148,6 +148,19 @@ export default function CheckUpFahreignungPage() {
         <div style={{ padding: '1.25rem', backgroundColor: '#f9fafb', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
           <h3 style={{ fontSize: '1.1rem', color: '#005b4f', marginBottom: '0.5rem' }}>Medizinische Angaben</h3>
           <p style={{ fontSize: '0.95rem', color: '#4b5563', margin: 0 }}>Eine vollständige Liste Ihrer regelmässig eingenommenen Medikamente und allfällige Vorbefunde relevanter Vorerkrankungen.</p>
+        </div>
+      </div>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2.5rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Labor.webp"
+          alt="In-House Praxislabor Dübendorf – Schnelle Blut- und Urinanalysen für Check-ups und Fahreignung"
+          width={840}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+        <div style={{ padding: '0.75rem 1rem', background: '#f9fafb', fontSize: '0.88rem', color: '#6b7280', fontStyle: 'italic', textAlign: 'center' }}>
+          Umfassende labormedizinische Analysen für Vorsorge und verkehrsmedizinische Atteste direkt vor Ort.
         </div>
       </div>
 

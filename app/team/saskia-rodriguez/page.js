@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Dr. med. (RO) Saskia Rodriguez | Hausärztin Dübendorf | Frauengesundheit",
-  description: "Dr. med. (RO) Saskia Rodriguez ist Ihre Hausärztin in Dübendorf an der Leepüntstrasse 5. Schwerpunkte: Allgemeinmedizin, Frauengesundheit, Prävention & multilinguale Sprechstunde.",
+  title: "Dr. med. Saskia Rodriguez | Hausärztin Dübendorf",
+  description: "Dr. med. Saskia Rodriguez ist Ihre Hausärztin in Dübendorf. Allgemeinmedizin, Frauengesundheit, Prävention & mehrsprachige Sprechstunde. Jetzt buchen.",
   alternates: {
     canonical: "/team/saskia-rodriguez",
   },
   openGraph: {
     title: "Dr. med. (RO) Saskia Rodriguez | Hausärztin Dübendorf",
-    description: "Praktische Ärztin für Allgemeinmedizin und Leitung in Dübendorf. Umfassende hausärztliche Grundversorgung und Frauengesundheit.",
+    description: "Praktische Ärztin für Allgemeinmedizin und Praxenleitung in Dübendorf. Umfassende hausärztliche Grundversorgung und Frauengesundheit.",
     url: "https://hausarztpraxis-duebendorf.ch/team/saskia-rodriguez",
     images: [{ url: "/images/team/Dr. Saskia.webp", width: 480, height: 480, alt: "Dr. med. Saskia Rodriguez Hausärztin Dübendorf" }],
   },
@@ -117,13 +117,13 @@ export default function SaskiaRodriguezPage() {
       {/* Main Content Sections */}
       <article style={{ lineHeight: '1.8', fontSize: '1.05rem', color: '#374151' }}>
         <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
-          Über Dr. med. Saskia Rodriguez – Ärztliche Kompetenz mit Herz
+          Beruflicher Werdegang &amp; fundierte medizinische Expertise
         </h2>
         <p>
-          Dr. med. (RO) Saskia Rodriguez ist eine erfahrene und engagierte Ärztin für Allgemeinmedizin, die unser Team in Dübendorf mit grosser fachlicher Kompetenz und ausgeprägtem menschlichem Einfühlungsvermögen verstärkt. Mit einer fundierten medizinischen Ausbildung an renommierten universitären Institutionen und langjähriger klinischer Praxis in Europa und der Schweiz vertritt sie eine moderne, evidenzbasierte Grundversorgung.
+          Dr. med. (RO) Saskia Rodriguez ist eine erfahrene und engagierte praktische Ärztin für Allgemeinmedizin, die unser Ärztekollegium in Dübendorf mit hoher fachlicher Kompetenz, diagnostischer Präzision und ausgeprägtem menschlichem Feingefühl bereichert. Nach ihrem Medizinstudium an traditionsreichen universitären Fakultäten und langjährigen klinischen Weiterbildungsabschnitten in der Inneren Medizin, Akutmedizin und ambulanten Grundversorgung vertritt sie eine moderne, evidenzbasierte Primärversorgung.
         </p>
         <p>
-          Als Mitverantwortliche im Ärzteverbund Praxen Jerumed legt Dr. med. Rodriguez ausserordentlichen Wert auf eine individuelle, patientenzentrierte Medizin. Sie nimmt sich bewusst Zeit für das ausführliche persönliche Gespräch, um die Ursachen von Beschwerden ganzheitlich zu ergründen und massgeschneiderte therapeutische Lösungen für jeden einzelnen Patienten zu entwickeln.
+          Als geschätzte ärztliche Mitverantwortliche im regionalen Praxisverbund Praxen Jerumed widmet sich Dr. med. Rodriguez der ganzheitlichen Betreuung von Patientinnen und Patienten aller Altersstufen. Sie verbindet bewährte Schulmedizin mit einem offenen Ohr für die individuellen Belange jedes Hilfesuchenden und nimmt sich bewusst die notwendige Zeit für eine gründliche Ursachenforschung bei komplexen oder unklaren Beschwerdebildern.
         </p>
 
         {/* Practice Environment Visual */}
@@ -141,40 +141,40 @@ export default function SaskiaRodriguezPage() {
         </div>
 
         <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
-          Behandlungsschwerpunkte und Fachgebiete
+          Medizinische Behandlungsschwerpunkte: Frauengesundheit, Prävention &amp; Chronic Care
         </h2>
         <p>
-          Dr. med. Rodriguez bietet ein breites Spektrum an allgemeinmedizinischen Leistungen mit gezielten Schwerpunkten:
+          Dr. med. Saskia Rodriguez bietet in unserer Praxis in Dübendorf ein breit gefächertes Behandlungsspektrum der ambulanten Allgemeinmedizin mit gezielten Spezialisierungen:
         </p>
-        <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
           <li>
-            <strong>Allgemeinmedizinische Grundversorgung:</strong> Diagnostik und Behandlung sämtlicher akuter Erkrankungen (Infektionen, Schmerzen, Magen-Darm-Probleme) sowie Langzeitbegleitung von chronischen Krankheiten.
+            <strong>Allgemeinmedizinische Grundversorgung:</strong> Gründliche Abklärung und Behandlung aller akuten Erkrankungen (fieberhafte Infekte, Magen-Darm-Beschwerden, Kopf- und Rückenschmerzen) sowie kontinuierliche Begleitung von Patienten mit chronischen Beschwerden.
           </li>
           <li>
-            <strong>Frauengesundheit &amp; Gynäkologische Basisberatung:</strong> Einfühlsame Betreuung von Frauen in allen Lebensphasen – von Zyklusunregelmässigkeiten über Verhütungsberatung bis hin zu Beschwerden in den Wechseljahren (Menopause).
+            <strong>Frauengesundheit &amp; Gynäkologische Basisberatung:</strong> Einfühlsame hausärztliche Betreuung von Frauen in sämtlichen Lebensabschnitten – von Menstruationsbeschwerden und individueller Verhütungsberatung bis hin zur ganzheitlichen Linderung typischer Wechseljahrbeschwerden (Klimakterium).
           </li>
           <li>
-            <strong>Präventionsmedizin &amp; Check-ups:</strong> Umfassende Gesundheits-Check-ups zur Früherkennung von Risikofaktoren wie Bluthochdruck, Cholesterinerhöhung, Schilddrüsendysfunktionen und Diabetes mellitus.
+            <strong>Vitalitätsaufbau &amp; Eisenmangel-Therapie:</strong> Gezielte Diagnostik des Eisenstoffwechsels (Ferritin, Transferrinsättigung) bei anhaltender Erschöpfung, Abgeschlagenheit oder Haarausfall sowie Durchführung schonender intravenöser Eiseninfusionen und Vitalstoffkuren.
           </li>
           <li>
-            <strong>Vitalitäts- &amp; Eisenmangel-Therapie:</strong> Gezielte Labordiagnostik bei Erschöpfung und chronischer Müdigkeit sowie Durchführung schonender intravenöser Eiseninfusionen und Vitamin-Aufbaukuren.
+            <strong>Präventivmedizin &amp; Personalisierte Check-ups:</strong> Detaillierte Vorsorgeuntersuchungen zur Früherkennung von Bluthochdruck, Fettstoffwechselstörungen, Schilddrüsendysfunktionen und Diabetes mellitus.
           </li>
           <li>
-            <strong>Hautgesundheit &amp; Kleinchirurgie:</strong> Ärztliche Erstbeurteilung von Hautveränderungen, Wundmanagement, Verbände und Fadenentfernungen.
+            <strong>Hautgesundheit &amp; Ambulante Wundpflege:</strong> Ärztliche Begutachtung von Hautveränderungen, moderne Wundbehandlung, Verbandsanlagen sowie schonende Fadenentfernungen.
           </li>
           <li>
-            <strong>Internationale &amp; multilinguale Beratung:</strong> Dank fliessender Sprachkenntnisse auf Deutsch, Spanisch, Englisch, Rumänisch und Französisch ist Dr. med. Rodriguez eine gefragte Ansprechpartnerin für internationale Patienten und Expats im Grossraum Dübendorf und Zürich.
+            <strong>Internationale &amp; multilinguale Konsultationen:</strong> Dank hervorragender Sprachkenntnisse auf Deutsch, Spanisch (Español), Englisch, Französisch und Rumänisch ist Dr. med. Rodriguez eine ideale Ansprechpartnerin für internationale Patientinnen und Expats im Grossraum Dübendorf, Stettbach und Zürich.
           </li>
         </ul>
 
         <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
-          Behandlungsansatz: Partnerschaftliche Medizin auf Augenhöhe
+          Behandlungsansatz: Partnerschaftliche Medizin auf Augenhöhe &amp; Mehrsprachigkeit
         </h2>
         <p>
-          Für Dr. med. Rodriguez bedeutet moderne Medizin eine echte Partnerschaft zwischen Ärztin und Patient. Ein verständlicher Austausch über Untersuchungsbefunde, transparente Diagnosen und gemeinsame Therapieentscheidungen schaffen Sicherheit und fördern den Heilungsprozess nachhaltig.
+          Für Dr. med. Rodriguez gründet eine wirksame Therapie immer auf einer vertrauensvollen Partnerschaft zwischen Ärztin und Patient. Sie legt ausserordentlichen Wert darauf, dass Untersuchungsbefunde, labormedizinische Werte und diagnostische Zusammenhänge transparent und leicht nachvollziehbar besprochen werden. 
         </p>
         <p>
-          Patientinnen und Patienten schätzen an ihr insbesondere die warme, einfühlsame Art sowie die Gründlichkeit, mit der sie auch unspezifischen Symptomen wie chronischer Müdigkeit, stressbedingten Beschwerden oder diffusen Schmerzen nachgeht.
+          Patientinnen und Patienten schätzen an ihr insbesondere die ruhige, warmherzige Art sowie die Gründlichkeit, mit der sie auch unspezifischen Beschwerden wie anhaltender Müdigkeit, Schwindel oder stressbedingter Überlastung auf den Grund geht. Therapeutische Massnahmen werden immer individuell auf den persönlichen Alltag und die Lebensgewohnheiten der Betroffenen abgestimmt.
         </p>
 
         {/* In-House Pharmacy Visual */}
@@ -189,18 +189,18 @@ export default function SaskiaRodriguezPage() {
             />
           </div>
           <div style={{ flex: 1, minWidth: '220px', fontSize: '0.95rem', color: '#065f46' }}>
-            <strong>Hauseigene Apotheke:</strong> Nach der ärztlichen Konsultation erhalten Sie verordnete Medikamente direkt vor Ort in unserer Praxisapotheke an der Leepüntstrasse 5 – ohne zusätzlichen Gang in eine externe Apotheke.
+            <strong>Integrierte Praxisapotheke:</strong> Nach der Sprechstunde erhalten Sie ärztlich verordnete Medikamente sofort vor Ort an der Leepüntstrasse 5 – bequem und ohne zusätzlichen Weg in eine externe Apotheke.
           </div>
         </div>
 
         <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
-          Sprechstunde &amp; Terminbuchung an der Leepüntstrasse 5
+          Sprechstunde an der Leepüntstrasse 5 in Dübendorf &amp; Kassenanerkennung
         </h2>
         <p>
-          Dr. med. (RO) Saskia Rodriguez empfängt Patientinnen und Patienten in der <strong>Hausarztpraxis Dübendorf</strong>. Die Praxis ist barrierefrei zugänglich und hervorragend mit Bus, Tram und S-Bahn (Bahnhof Dübendorf und Stettbach) erreichbar.
+          Dr. med. (RO) Saskia Rodriguez empfängt ihre Patientinnen und Patienten in den barrierefreien Räumlichkeiten der <strong>Hausarztpraxis Dübendorf, Leepüntstrasse 5</strong>. Dank der optimalen Verkehrsanbindung (nahe Bahnhof Dübendorf und Bahnhof Stettbach) ist die Praxis sowohl mit dem öffentlichen Verkehr als auch mit dem Auto mühelos erreichbar.
         </p>
         <p>
-          <strong>Krankenkassenanerkennung (KVG/UVG):</strong> Die Behandlungen von Dr. med. Rodriguez werden von sämtlichen Schweizer Krankenkassen (Grundversicherung) und Unfallversicherungen übernommen. Neue Patientinnen und Patienten für die kontinuierliche hausärztliche Betreuung sind herzlich willkommen.
+          <strong>Vollständige Kassenanerkennung (KVG/UVG):</strong> Die Behandlungen von Dr. med. Rodriguez werden von allen Schweizer Krankenversicherungen im Rahmen der obligatorischen Grundversicherung (KVG/TARMED) sowie von den Unfallversicherungen vollumfänglich vergütet. Neue Patientinnen und Patienten sind in allen Versicherungsmodellen jederzeit willkommen.
         </p>
       </article>
 
@@ -210,7 +210,7 @@ export default function SaskiaRodriguezPage() {
           Termin bei Dr. med. Saskia Rodriguez vereinbaren
         </h3>
         <p style={{ color: '#374151', maxWidth: '600px', margin: '0 auto 1.5rem', fontSize: '1.02rem', lineHeight: '1.6' }}>
-          Vereinbaren Sie Ihren Termin unkompliziert rund um die Uhr über unser Online-Buchungsportal oder kontaktieren Sie uns direkt per Telefon.
+          Vereinbaren Sie Ihren Sprechstundentermin einfach online rund um die Uhr oder kontaktieren Sie uns direkt telefonisch während der Praxisöffnungszeiten.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a

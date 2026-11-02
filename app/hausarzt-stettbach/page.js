@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: "Hausarzt Stettbach | Arztpraxis & Walk-in nahe Bahnhof Stettbach",
-  description: "Ihr Hausarzt nahe Bahnhof Stettbach & Dübendorf. Schnelle Termine & Walk-in Notfallbehandlung ohne Voranmeldung. Auch am Samstag geöffnet. Jetzt informieren.",
+  title: "Hausarzt Stettbach | Praxis & Walk-in nahe Bahnhof",
+  description: "Ihr Hausarzt nahe Bahnhof Stettbach: Schnelle Termine & Walk-in Notfallbehandlung ohne Voranmeldung. Auch samstags geöffnet. Jetzt online buchen.",
   alternates: {
     canonical: "/hausarzt-stettbach",
   },
@@ -146,6 +146,19 @@ export default function HausarztStettbachPage() {
         <div style={{ padding: '1.25rem', backgroundColor: '#f9fafb', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
           <h3 style={{ fontSize: '1.1rem', color: '#005b4f', marginBottom: '0.5rem' }}>Direkte Medikamentenabgabe</h3>
           <p style={{ fontSize: '0.95rem', color: '#4b5563', margin: 0 }}>Unsere praxiseigene Apotheke versorgt Sie unmittelbar vor Ort mit den notwendigen Medikamenten, ohne dass Sie noch zur Apotheke müssen.</p>
+        </div>
+      </div>
+
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2.5rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Hauseigene Apotheke.webp"
+          alt="Hauseigene Apotheke der Hausarztpraxis Dübendorf – Schnelle Medikamentenabgabe für Pendler aus Stettbach"
+          width={840}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+        <div style={{ padding: '0.75rem 1rem', background: '#f9fafb', fontSize: '0.88rem', color: '#6b7280', fontStyle: 'italic', textAlign: 'center' }}>
+          Direkte Abgabe verordneter Medikamente in unserer Praxisapotheke an der Leepüntstrasse 5.
         </div>
       </div>
 

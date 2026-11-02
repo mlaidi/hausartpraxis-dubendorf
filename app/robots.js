@@ -1,10 +1,18 @@
 export default function robots() {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/_next/'],
-    },
+    rules: [
+      {
+        userAgent: '*',
+        allow: [
+          '/',
+          '/_next/static/',
+          '/_next/image',
+        ],
+        disallow: [
+          '/api/',
+        ],
+      },
+    ],
     sitemap: 'https://hausarztpraxis-duebendorf.ch/sitemap.xml',
-  }
+  };
 }

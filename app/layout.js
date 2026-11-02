@@ -35,7 +35,7 @@ const sourceSans3 = Source_Sans_3({
 export const metadata = {
   title: "Hausarzt Dübendorf | Arztpraxis & Permanence (Ohne Termin)",
   description:
-    "Ihre Hausarztpraxis in Dübendorf. Wir bieten Termine und Notfallbehandlungen ohne Voranmeldung (Permanence). Willkommen auch für Patienten aus Stettbach, Wallisellen und Zürich.",
+    "Ihre Hausarztpraxis in Dübendorf: moderne Grundversorgung & Walk-in Notfallpraxis ohne Voranmeldung. Für Dübendorf, Stettbach & Glattal.",
   metadataBase: new URL("https://hausarztpraxis-duebendorf.ch"),
   alternates: {
     canonical: "/",
@@ -46,7 +46,7 @@ export const metadata = {
     siteName: "Hausarztpraxis Dübendorf",
     title: "Hausarzt Dübendorf | Arztpraxis & Permanence (Ohne Termin)",
     description:
-      "Ihre Hausarztpraxis in Dübendorf. Wir bieten Termine und Notfallbehandlungen ohne Voranmeldung (Permanence). Willkommen auch für Patienten aus Stettbach, Wallisellen und Zürich.",
+      "Ihre Hausarztpraxis in Dübendorf: moderne Grundversorgung & Walk-in Notfallpraxis ohne Voranmeldung. Für Dübendorf, Stettbach & Glattal.",
     locale: "de_CH",
     images: [
       {

@@ -187,6 +187,19 @@ export default function HausarztDuebendorfPage() {
         Dank unserer integrierten Praxisapotheke können Sie verordnete Arzneimittel direkt nach Ihrer Konsultation bei uns mitnehmen. Das spart wertvolle Zeit und unnötige Wege zur externen Apotheke – insbesondere wenn Sie krank sind oder rasch mit der Einnahme von Antibiotika oder Schmerzmitteln beginnen müssen. Dauerrezepte können Sie zudem unkompliziert telefonisch oder per E-Mail nachbestellen.
       </p>
 
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2.5rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/praxis/Warte-Raum.webp"
+          alt="Hausarztpraxis Dübendorf – Angenehmer Wartebereich und Patientenempfang an der Leepüntstrasse 5"
+          width={800}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+        <div style={{ padding: '0.75rem 1rem', background: '#f9fafb', fontSize: '0.88rem', color: '#6b7280', fontStyle: 'italic', textAlign: 'center' }}>
+          Helle, ruhige Praxisräumlichkeiten für kurze Wartezeiten und eine vertrauensvolle Behandlung.
+        </div>
+      </div>
+
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>
         Unser medizinisches Team: Vertrauensvoll & mehrsprachig
       </h2>

@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Dipl. Arzt Awad Abuawad | Hausarzt in Dübendorf | Praxenleitung",
-  description: "Dipl. Arzt Awad Abuawad ist Ihr erfahrener Hausarzt für Allgemeinmedizin in Dübendorf an der Leepüntstrasse 5. Über 20 Jahre Praxiserfahrung in der Grundversorgung. Jetzt online Termin buchen.",
+  title: "Dipl. Arzt Awad Abuawad | Hausarzt Dübendorf",
+  description: "Dipl. Arzt Awad Abuawad ist Ihr erfahrener Hausarzt in Dübendorf. Umfassende Grundversorgung, Notfalltriage & Vorsorge. Jetzt online Termin buchen.",
   alternates: {
     canonical: "/team/awad-abuawad",
   },
@@ -90,7 +90,7 @@ export default function AwadAbuawadPage() {
           <div style={{ width: 160, height: 160, borderRadius: '50%', overflow: 'hidden', flexShrink: 0, border: '4px solid #ffffff', boxShadow: '0 8px 24px rgba(0,0,0,0.1)' }}>
             <Image
               src="/images/team/Dr. Awad.webp"
-              alt="Dipl. Arzt Awad Abuawad – Hausarzt und Praxenleiter Dübendorf"
+              alt="Dipl. Arzt Awad Abuawad – Erfahrener Hausarzt und Praxenleiter Dübendorf"
               width={160}
               height={160}
               priority
@@ -117,13 +117,13 @@ export default function AwadAbuawadPage() {
       {/* Main Content Sections */}
       <article style={{ lineHeight: '1.8', fontSize: '1.05rem', color: '#374151' }}>
         <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
-          Über Dipl. Arzt Awad Abuawad – Ihr Hausarzt in Dübendorf
+          Beruflicher Werdegang &amp; klinische Erfahrung in der Grundversorgung
         </h2>
         <p>
-          Dipl. Arzt Awad Abuawad ist diplomierter Arzt für Allgemeinmedizin mit <strong>über 20 Jahren praktischer Erfahrung</strong> in der medizinischen Grundversorgung und ambulanten Patientenbetreuung. Als Gründer und medizinischer Leiter des Praxisverbunds Praxen Jerumed steht er für eine patientennahe, wissenschaftlich fundierte und menschlich zugewandte Medizin im Zürcher Oberland und Grossraum Zürich.
+          Dipl. Arzt Awad Abuawad ist diplomierter Arzt für Allgemeinmedizin mit <strong>über 20 Jahren praktischer Erfahrung</strong> in der medizinischen Grundversorgung, ambulanten Diagnostik und Akuttriage. Als Gründer und medizinischer Leiter des regionalen Praxisverbunds Praxen Jerumed steht er für eine wissenschaftlich fundierte, leitliniengerechte und zutiefst menschliche Medizin in Dübendorf, im Glattal sowie im Grossraum Zürich.
         </p>
         <p>
-          Nach seinem Medizinstudium und fundierten klinischen Weiterbildungen in Innerer Medizin, Chirurgie und Notfallmedizin in der Schweiz und im Ausland hat sich Dipl. Arzt Abuawad vollumfänglich der hausärztlichen Grundversorgung verschrieben. In der Hausarztpraxis Dübendorf betreut er Patientinnen und Patienten aller Generationen – vom Teenager bis zum hochbetagten Menschen – mit hohem fachlichem Sachverstand und persönlicher Hingabe.
+          Nach dem erfolgreichen Abschluss seines Medizinstudiums und fundierten klinischen Weiterbildungsstationen in den Fachbereichen Innere Medizin, allgemeine Chirurgie, Traumatologie und Notfallmedizin in der Schweiz und im Ausland hat sich Dipl. Arzt Abuawad mit voller Überzeugung der ambulanten hausärztlichen Betreuung gewidmet. In unserer Praxis an der Leepüntstrasse 5 betreut er Patientinnen und Patienten über sämtliche Altersstufen hinweg – vom Jugendlichen über Berufstätige bis hin zu hochbetagten Menschen mit komplexen Mehrfacherkrankungen.
         </p>
 
         {/* Practice Environment Visual */}
@@ -136,45 +136,45 @@ export default function AwadAbuawadPage() {
             style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
           />
           <div style={{ padding: '0.75rem 1rem', background: '#f9fafb', fontSize: '0.88rem', color: '#6b7280', fontStyle: 'italic', textAlign: 'center' }}>
-            Empfang und Behandlungsräume der Hausarztpraxis Dübendorf an der Leepüntstrasse 5 nahe Bahnhof Stettbach.
+            Empfang und moderne Behandlungsräume der Hausarztpraxis Dübendorf an der Leepüntstrasse 5 nahe Bahnhof Stettbach.
           </div>
         </div>
 
         <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
-          Behandlungsschwerpunkte und medizinische Spezialisierungen
+          Medizinische Behandlungsschwerpunkte &amp; Fachkompetenzen
         </h2>
         <p>
-          Das Leistungsspektrum von Dipl. Arzt Awad Abuawad umfasst das gesamte Spektrum der ambulanten Allgemeinmedizin und Inneren Grundversorgung:
+          Das vielseitige Leistungsspektrum von Dipl. Arzt Awad Abuawad umfasst alle Facetten der modernen ambulanten Allgemeinmedizin und Inneren Medizin:
         </p>
-        <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
           <li>
-            <strong>Hausärztliche Grundversorgung:</strong> Gründliche Abklärung, Diagnostik und ganzheitliche Therapie akuter Erkrankungen (wie Atemwegsinfekte, Magen-Darm-Erkrankungen, Grippe oder Blasenentzündungen).
+            <strong>Umfassende hausärztliche Grundversorgung:</strong> Gründliche Anamnese, klinische Diagnostik und strukturierte Therapie bei akuten Erkrankungen wie Atemwegsinfekten, Grippe, Lungenentzündungen, Magen-Darm-Erkrankungen oder akuten Schmerzzuständen.
           </li>
           <li>
-            <strong>Betreuung chronischer Krankheiten (Chronic Care):</strong> Langzeitmanagement von Patienten mit Bluthochdruck (Hypertonie), Typ-2-Diabetes mellitus, Fettstoffwechselstörungen, Asthma/COPD und Schilddrüsenerkrankungen.
+            <strong>Chronikerbetreuung &amp; Disease Management (Chronic Care):</strong> Langzeitbegleitung von Patienten mit Bluthochdruck (arterielle Hypertonie), Diabetes mellitus Typ 2, Dyslipidämie, Asthma bronchiale, chronischer Bronchitis (COPD) sowie Schilddrüsenerkrankungen.
           </li>
           <li>
-            <strong>Präventivmedizin &amp; Check-ups:</strong> Umfassende Vorsorgeuntersuchungen, kardiovaskuläre Risikoanalyse, Krebsfrüherkennung und reisemedizinische Impfberatungen.
+            <strong>Präventivmedizin &amp; Individuelle Check-ups:</strong> Sorgfältige kardiovaskuläre Risikoanalyse, Krebsfrüherkennungsuntersuchungen, Altersvorsorge, reisemedizinische Impfberatung sowie Abklärungen der Fahreignung.
           </li>
           <li>
-            <strong>Ambulante Akuttriage &amp; Wundversorgung:</strong> Schnelle Erstversorgung kleinerer Schnitt- und Platzwunden, Wundnaht, Verbände und Nachbehandlungen.
+            <strong>Wundversorgung &amp; Ambulante Kleinchirurgie:</strong> Schnelle Erstversorgung und Naht von Schnitt-, Riss- und Platzwunden, Abszessbehandlungen, Verbandswechsel und Entfernung von Hautnähten oder Klammern.
           </li>
           <li>
-            <strong>Labor- und EKG-Diagnostik:</strong> Schnellauswertung wichtiger Blutwerte (CRP, Troponin, D-Dimer, Blutzucker) im praxiseigenen Sofortlabor sowie Ruhe-EKG bei Herzbeschwerden.
+            <strong>In-House Labordiagnostik &amp; EKG:</strong> Unmittelbare Blutanalyse im praxiseigenen Sofortlabor (Entzündungsmarker CRP, Troponin, D-Dimer, HbA1c, Blutzucker, Urin) sowie Ruhe-EKG bei Verdacht auf kardiologische Notfälle.
           </li>
           <li>
-            <strong>Multilinguale Konsultation:</strong> Muttersprachliche ärztliche Beratung auf Deutsch und Arabisch für eine barrierefreie Verständigung und präzise Anamnese.
+            <strong>Interdisziplinäre Koordination:</strong> Bei Bedarf gezielte Überweisung an spezialisierte Fachärzte im Jerumed-Netzwerk (Urologie, Kardiologie, Orthopädie, Radiologie) mit lückenlosem Informationsfluss.
           </li>
         </ul>
 
         <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
-          Behandlungsphilosophie: Zeit für den Menschen und ganzheitlicher Ansatz
+          Ganzheitliche Behandlungsphilosophie &amp; barrierefreie Kommunikation
         </h2>
         <p>
-          Für Dipl. Arzt Abuawad steht nicht allein das isolierte Symptom oder ein einzelner Laborwert im Fokus, sondern stets der Mensch in seiner individuellen Lebenssituation. Eine erfolgreiche Genesung und langfristige Gesundheit beruhen auf gegenseitigem Vertrauen, aktivem Zuhören und verständlicher Aufklärung über alle Befunde und Behandlungsoptionen.
+          Für Dipl. Arzt Abuawad steht niemals nur das isolierte Symptom oder ein isolierter Laborwert im Fokus, sondern stets der Mensch in seiner gesamten individuellen Lebenswirklichkeit. Eine nachhaltige Genesung und erfolgreiche Prävention basieren auf gegenseitigem Vertrauen, aufmerksamem Zuhören und einer partnerschaftlichen Arzt-Patienten-Beziehung.
         </p>
         <p>
-          Durch die enge Vernetzung im Ärzteverbund Praxen Jerumed gewährleistet Dipl. Arzt Abuawad zudem bei komplexeren medizinischen Fragestellungen kurze Wege zu Spezialisten der Kardiologie, Urologie und Radiologie.
+          Befunde werden stets verständlich und ohne unverständlichen Fachjargon erklärt, sodass Patienten aktiv und informiert an ihren Therapieentscheidungen mitwirken können. Dank seiner fliessenden Zweisprachigkeit in <strong>Deutsch und Arabisch (العربية)</strong> bietet Dipl. Arzt Abuawad vielen Patientinnen und Patienten eine muttersprachliche ärztliche Beratung ohne sprachliche Missverständnisse.
         </p>
 
         {/* Diagnostics Partner Visual */}
@@ -189,18 +189,18 @@ export default function AwadAbuawadPage() {
             />
           </div>
           <div style={{ flex: 1, minWidth: '220px', fontSize: '0.95rem', color: '#065f46' }}>
-            <strong>Modernste Praxislabordiagnostik:</strong> In Zusammenarbeit mit akkreditierten Schweizer Fachlaboren gewährleisten wir präzise und zügige Laboranalysen direkt vor Ort in Dübendorf.
+            <strong>Modernste Praxislabordiagnostik vor Ort:</strong> In enger Kooperation mit führenden Schweizer Laboratorien gewährleisten wir schnelle und zuverlässige Analysen direkt in unserer Praxis an der Leepüntstrasse 5.
           </div>
         </div>
 
         <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
-          Sprechstunde an der Leepüntstrasse 5 in Dübendorf
+          Sprechstunde an der Leepüntstrasse 5 &amp; Krankenkassenübernahme
         </h2>
         <p>
-          Die Hausarztpraxis Dübendorf befindet sich an zentraler Lage an der <strong>Leepüntstrasse 5, 8600 Dübendorf</strong>. Die Praxis ist sowohl mit öffentlichen Verkehrsmitteln (Nähe Bahnhof Dübendorf und Verkehrsknotenpunkt Bahnhof Stettbach) als auch mit dem Auto (Parkmöglichkeiten im Quartier) bequem erreichbar.
+          Die Hausarztpraxis Dübendorf liegt optimal erreichbar an der <strong>Leepüntstrasse 5, 8600 Dübendorf</strong> – in unmittelbarer Nähe zum Bahnhof Dübendorf sowie dem Verkehrsknotenpunkt Bahnhof Stettbach. Für Patienten mit dem Privatauto stehen praktische Parkmöglichkeiten im Quartier zur Verfügung.
         </p>
         <p>
-          <strong>Krankenkassenanerkennung:</strong> Alle Behandlungen von Dipl. Arzt Awad Abuawad sind über die Schweizer Grundversicherung (KVG/TARMED) sowie über die Unfallversicherung (UVG) zu 100% kassenanerkannt. Neue Patientinnen und Patienten sind jederzeit herzlich willkommen – auch im Hausarzt- oder Telmed-Modell.
+          <strong>Volle Krankenkassenanerkennung (KVG &amp; UVG):</strong> Alle allgemeinmedizinischen Konsultationen und Behandlungen von Dipl. Arzt Awad Abuawad werden gemäss dem Schweizerischen Krankenversicherungsgesetz (KVG/TARMED) sowie dem Unfallversicherungsgesetz (UVG) zu 100 % von sämtlichen Schweizer Krankenkassen übernommen. Wir heissen neue Patientinnen und Patienten in allen Versicherungsmodellen (Standard, Hausarztmodell, Telmed, HMO) herzlich willkommen.
         </p>
       </article>
 
@@ -210,7 +210,7 @@ export default function AwadAbuawadPage() {
           Termin bei Dipl. Arzt Awad Abuawad vereinbaren
         </h3>
         <p style={{ color: '#374151', maxWidth: '600px', margin: '0 auto 1.5rem', fontSize: '1.02rem', lineHeight: '1.6' }}>
-          Buchen Sie Ihre Konsultation bequem rund um die Uhr online oder rufen Sie unser Praxisteam während der Öffnungszeiten an. Bei akuten Beschwerden ist auch ein kurzfristiger Walk-in ohne Voranmeldung möglich.
+          Buchen Sie Ihren Sprechstundentermin bequem rund um die Uhr online über unser Buchungsportal oder erreichen Sie uns telefonisch während der Öffnungszeiten. Bei akuten Schmerzen ist auch ein kurzfristiger Walk-in ohne Termin möglich.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <a

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: "Urologie Dübendorf | Urologische Abklärung & Sprechstunde",
-  description: "Spezialisierte Urologie in Dübendorf: Diagnostik von Nieren, Blase und Prostata mit hauseigenem Ultraschall & Labor. Schnelle Termine, auch ohne lange Wartezeiten.",
+  description: "Urologie in Dübendorf: Diagnostik von Niere, Blase und Prostata mit Ultraschall & Sofortlabor. Schnelle Sprechstundentermine ohne lange Wartezeit.",
   alternates: {
     canonical: "/leistungen/urologie",
   },
@@ -125,6 +125,19 @@ export default function UrologiePage() {
         <li style={{ marginBottom: '0.5rem' }}><strong>Harnsteindiagnostik:</strong> Schnelle Erstabklärung und Schmerztherapie bei Koliken oder Verdacht auf Nieren- und Blasensteine.</li>
       </ul>
 
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2.5rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/services/Labor.webp"
+          alt="In-House Praxislabor Dübendorf – Schnelle Urin- und Blutanalysen bei urologischen Beschwerden"
+          width={840}
+          height={380}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+        <div style={{ padding: '0.75rem 1rem', background: '#f9fafb', fontSize: '0.88rem', color: '#6b7280', fontStyle: 'italic', textAlign: 'center' }}>
+          Sofortige Labordiagnostik vor Ort zur Differenzierung von Harnwegsinfekten und Nierenfunktionswerten.
+        </div>
+      </div>
+
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>
         Häufige Symptome: Wann sollten Sie die Sprechstunde aufsuchen?
       </h2>
@@ -146,11 +159,27 @@ export default function UrologiePage() {
         </div>
       </div>
 
+      <div style={{ borderRadius: '12px', overflow: 'hidden', margin: '2.5rem 0', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}>
+        <Image
+          src="/images/banner.webp"
+          alt="Hausarztpraxis Dübendorf – Diskrete Behandlungsräume für urologische Konsultationen"
+          width={840}
+          height={360}
+          style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+        />
+        <div style={{ padding: '0.75rem 1rem', background: '#f9fafb', fontSize: '0.88rem', color: '#6b7280', fontStyle: 'italic', textAlign: 'center' }}>
+          Diskrete, vertrauensvolle Sprechstundenräume an der Leepüntstrasse 5.
+        </div>
+      </div>
+
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>
-        Ablauf einer Untersuchung & Patientenbetreuung
+        Ablauf einer Untersuchung &amp; Patientenbetreuung
       </h2>
-      <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#4b5563', marginBottom: '2.5rem' }}>
+      <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#4b5563', marginBottom: '1.5rem' }}>
         Ihr Besuch beginnt mit einem ausführlichen Anamnesegespräch in ruhiger Atmosphäre. Anschliessend führen wir die notwendigen körperlichen und sonographischen Untersuchungen durch. Bei Bedarf erfolgt die direkte Blut- und Urinuntersuchung in unserem Labor, sodass Sie die wesentlichen Resultate oft noch während desselben Termins besprechen können. Sollten weiterführende operative Eingriffe notwendig sein, arbeiten wir eng mit spezialisierten urologischen Zentren und Kliniken im Kanton Zürich zusammen.
+      </p>
+      <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: '#4b5563', marginBottom: '2.5rem' }}>
+        <strong>Krankenkassenabrechnung &amp; Hausarztmodell:</strong> Alle medizinisch indizierten urologischen Konsultationen und Ultraschalluntersuchungen werden zu 100 % von der Grundversicherung (KVG/TARMED) sämtlicher Schweizer Krankenkassen übernommen. Patientinnen und Patienten im Hausarzt-, HMO- oder Telmed-Modell können sich unkompliziert direkt über unsere Grundversorger zuweisen lassen.
       </p>
 
       <div style={{ padding: '2rem', backgroundColor: '#f0fdfa', borderRadius: '10px', border: '1px solid #ccfbf1', marginBottom: '3rem' }}>
