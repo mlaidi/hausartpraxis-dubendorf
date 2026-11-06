@@ -11,6 +11,20 @@
   color: var(--white);
   letter-spacing: .3px;
   border-bottom: 1px solid rgba(255, 255, 255, .20);
+  transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.3s ease;
+  max-height: 50px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.topBarHidden,
+.headerScrolled .topBar {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+  pointer-events: none;
 }
 
 .topBarInner {
@@ -59,12 +73,14 @@
   transform: scale(1.1);
 }
 
-header[role="banner"] {
+header[role="banner"],
+.siteHeader {
   position: sticky;
   top: 0;
   z-index: 9999;
   width: 100%;
-  background: var(--white);
+  background: transparent;
+  transition: all .3s ease;
 }
 
 .navbar {
@@ -76,9 +92,11 @@ header[role="banner"] {
 }
 
 .navbarScrolled {
-  background: rgba(255, 255, 255, .98);
-  border-bottom-color: var(--slate-200);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .navInner {
@@ -178,7 +196,7 @@ header[role="banner"] {
 
 .mobileMenu {
   position: absolute;
-  top: 96px;
+  top: 100%;
   left: 0;
   right: 0;
   background: var(--white);

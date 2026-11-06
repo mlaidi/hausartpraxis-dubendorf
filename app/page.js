@@ -233,11 +233,12 @@ export default function HomePage() {
   /* ── Scroll: navbar state + progress bar + back-to-top ── */
   useEffect(() => {
     const h = () => {
-      setScrolled(window.scrollY > 60);
+      setScrolled(window.scrollY > 40);
       setShowBackToTop(window.scrollY > 300);
       const docH = document.documentElement.scrollHeight - window.innerHeight;
       setScrollProgress(docH > 0 ? (window.scrollY / docH) * 100 : 0);
     };
+    h();
     window.addEventListener('scroll', h, { passive: true });
     return () => window.removeEventListener('scroll', h);
   }, []);
@@ -285,16 +286,17 @@ export default function HomePage() {
       {/* ══════════ HEADER / NAVIGATION ══════════ */}
       <header
         role="banner"
+        className={`siteHeader ${scrolled ? 'headerScrolled' : ''}`}
         style={{
           position: 'sticky',
           top: 0,
           zIndex: 9999,
           width: '100%',
-          background: '#ffffff',
+          background: 'transparent',
         }}
       >
         {/* ══════════ TOP BAR ══════════ */}
-        <div className="topBar">
+        <div className={`topBar ${scrolled ? 'topBarHidden' : ''}`}>
           <div className="topBarInner">
             <div className="topBarLeft">
               <span className="topBarItem"><ClockIcon size={16} /> {SITE.hours}</span>
