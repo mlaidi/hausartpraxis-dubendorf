@@ -106,6 +106,32 @@ const FAQS = [
   }
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": FAQS.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a,
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://hausarztpraxis-duebendorf.ch",
+    },
+  ],
+};
+
 /* ── Section Title ── */
 function SectionTitle({ sub, title, light, green }) {
   return (
@@ -201,7 +227,6 @@ export default function HomePage() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [openFaq, setOpenFaq] = useState(null);
-  const [showAllSchwerpunkte, setShowAllSchwerpunkte] = useState(false);
 
   useScrollDepth();
 
@@ -258,7 +283,16 @@ export default function HomePage() {
       {activeTeam !== null && <TeamModal member={TEAM[activeTeam]} onClose={() => setActiveTeam(null)} />}
 
       {/* ══════════ HEADER / NAVIGATION ══════════ */}
-      <header role="banner">
+      <header
+        role="banner"
+        style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 9999,
+          width: '100%',
+          background: '#ffffff',
+        }}
+      >
         {/* ══════════ TOP BAR ══════════ */}
         <div className="topBar">
           <div className="topBarInner">
@@ -267,9 +301,9 @@ export default function HomePage() {
               <span className="topBarItem"><MapPinIcon size={16} /> {SITE.address}</span>
             </div>
             <div className="topBarSocial">
-              {SITE.facebook && <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><FacebookIcon /></a>}
-              {SITE.instagram && <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><InstagramIcon /></a>}
-              {SITE.mapsLink && <a href={SITE.mapsLink} target="_blank" rel="noopener noreferrer" title="Google Maps" aria-label="Google Maps"><GoogleMapsIcon /></a>}
+              {SITE.facebook && <a href={SITE.facebook} target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook" onClick={(e) => e.currentTarget?.blur()}><FacebookIcon /></a>}
+              {SITE.instagram && <a href={SITE.instagram} target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram" onClick={(e) => e.currentTarget?.blur()}><InstagramIcon /></a>}
+              {SITE.mapsLink && <a href={SITE.mapsLink} target="_blank" rel="noopener noreferrer" title="Google Maps" aria-label="Google Maps" onClick={(e) => e.currentTarget?.blur()}><GoogleMapsIcon /></a>}
             </div>
           </div>
         </div>
@@ -279,7 +313,7 @@ export default function HomePage() {
           {/* ── Scroll Progress Bar ── */}
           <div className="scrollProgressWrap"><div className="scrollProgressBar" style={{ width: `${scrollProgress}%` }} /></div>
           <div className="navInner">
-            <div className="navLogo" onClick={() => scrollTo('hero')}>
+            <div className="navLogo" onClick={(e) => { e.currentTarget?.blur(); scrollTo('hero'); }}>
               <Image
                 src={SITE.logoUrl}
                 alt="Hausarztpraxis Duebendorf Logo"
@@ -292,16 +326,32 @@ export default function HomePage() {
             </div>
             <div className="navLinks">
               {NAV_LINKS.map((l) => (
-                <button key={l.id} className={`navLink ${activeSection === l.id ? 'navLinkActive' : ''}`} onClick={() => scrollTo(l.id)}>{l.label}</button>
+                <a
+                  key={l.id}
+                  href={`#${l.id}`}
+                  className={`navLink ${activeSection === l.id ? 'navLinkActive' : ''}`}
+                  onClick={(e) => { e.preventDefault(); e.currentTarget?.blur(); scrollTo(l.id); }}
+                >
+                  {l.label}
+                </a>
               ))}
-              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btnPrimary" style={{ padding: '10px 24px', fontSize: 14, animation: 'pulse 2s infinite' }} onClick={() => trackBookingClick('navbar')}>Termin buchen</a>
+              <a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btnPrimary" style={{ padding: '10px 24px', fontSize: 14, animation: 'pulse 2s infinite' }} onClick={(e) => { e.currentTarget?.blur(); trackBookingClick('navbar'); }}>Termin buchen</a>
             </div>
-            <button className="mobileMenuBtn" onClick={() => { trackMobileMenu(!menuOpen); setMenuOpen(!menuOpen); }} aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}>{menuOpen ? <CloseIcon /> : <MenuIcon />}</button>
+            <button className="mobileMenuBtn" onClick={(e) => { e.currentTarget?.blur(); trackMobileMenu(!menuOpen); setMenuOpen(!menuOpen); }} aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}>{menuOpen ? <CloseIcon /> : <MenuIcon />}</button>
           </div>
           {menuOpen && (
             <div className="mobileMenu">
-              {NAV_LINKS.map((l) => <div key={l.id} className={`mobileMenuItem ${activeSection === l.id ? 'mobileMenuItemActive' : ''}`} onClick={() => scrollTo(l.id)}>{l.label}</div>)}
-              <div style={{ paddingTop: 16 }}><a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btnPrimary" style={{ width: '100%', justifyContent: 'center' }} onClick={() => trackBookingClick('mobile_menu')}>Termin buchen</a></div>
+              {NAV_LINKS.map((l) => (
+                <a
+                  key={l.id}
+                  href={`#${l.id}`}
+                  className={`mobileMenuItem ${activeSection === l.id ? 'mobileMenuItemActive' : ''}`}
+                  onClick={(e) => { e.preventDefault(); e.currentTarget?.blur(); scrollTo(l.id); }}
+                >
+                  {l.label}
+                </a>
+              ))}
+              <div style={{ paddingTop: 16 }}><a href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btnPrimary" style={{ width: '100%', justifyContent: 'center' }} onClick={(e) => { e.currentTarget?.blur(); trackBookingClick('mobile_menu'); }}>Termin buchen</a></div>
             </div>
           )}
         </nav>
@@ -309,6 +359,8 @@ export default function HomePage() {
 
       {/* ══════════ HERO ══════════ */}
       <main role="main">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <section id="hero" className="hero" style={{ overflow: 'hidden' }}>
           <div className="heroOrb1" /><div className="heroOrb2" /><div className="heroDots" />
           <div className="heroInnerFlex">
@@ -369,7 +421,7 @@ export default function HomePage() {
                 <p className="aboutSectionTitle">Über unsere Praxis</p>
                 <h2 className="aboutSectionHeading">Hausarzt ohne Termin Dübendorf – Walk-in Praxis & Permanence</h2>
                 <p>Ihr Familienarzt des Vertrauens in Dübendorf. Wir bieten Ihnen eine ganzheitliche medizinische Versorgung, die Vorsorge, Diagnostik und Therapie miteinander verbindet. Als Permanence sind wir bei dringenden Notfällen auch ohne Termin für Sie da.</p>
-                <p>Unter der ärztlichen Leitung von Dr. Awad Abuawad und gemeinsam mit erfahrenen Ärzten wie Dr. med. Saskia Rodriguez, Dr. med. Koller und Dr. Fedi Farah kümmern wir uns persönlich um Ihre Anliegen. Wir begrüssen auch Patienten aus Stettbach, Wallisellen und Zürich.</p>
+                <p>Unter der ärztlichen Leitung von Dipl. Arzt Awad Abuawad und gemeinsam mit Ärztin Dr. med. (RO) Saskia Rodriguez führen wir die medizinische Grundversorgung – auch als verlässliche Praxisnachfolge von Dr. med. Michael Koller an der Leepüntstrasse 5 – persönlich und kompetent weiter. Wir begrüssen Patientinnen und Patienten aus Dübendorf, Stettbach, Wallisellen und der Region Zürich Nord.</p>
                 <p className="aboutListLabel">Was uns auszeichnet:</p>
                 <ul className="aboutList">
                   <li className="aboutListItem">
@@ -647,6 +699,29 @@ export default function HomePage() {
                 <p>{t.role}</p>
                 {t.roleDetail && <p>{t.roleDetail}</p>}
                 {t.languages && <p style={{ fontSize: 12, color: 'var(--text-light)', marginTop: 4 }}>🌐 {t.languages}</p>}
+                {t.href && (
+                  <Link
+                    href={t.href}
+                    className="btn btnOutline"
+                    style={{
+                      marginTop: '16px',
+                      fontSize: '13px',
+                      padding: '8px 18px',
+                      borderRadius: '6px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      fontWeight: '600',
+                      textDecoration: 'none',
+                      color: 'var(--teal-dark, #005b4f)',
+                      border: '1.5px solid var(--teal-light, #3ca1de)',
+                      background: '#ffffff',
+                      transition: 'all 0.25s ease',
+                    }}
+                  >
+                    Profil &amp; Schwerpunkte <ArrowRightIcon size={14} />
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -804,61 +879,26 @@ export default function HomePage() {
             {/* Col 2 – Navigation & Schwerpunkte */}
             <div>
               <h4>Navigation</h4>
-              {NAV_LINKS.map((l) => <div key={l.id} className="footerLink" onClick={() => scrollTo(l.id)}>{l.label}</div>)}
+              {NAV_LINKS.map((l) => (
+                <a
+                  key={l.id}
+                  href={`#${l.id}`}
+                  className="footerLink"
+                  style={{ display: 'block', textDecoration: 'none' }}
+                  onClick={(e) => { e.preventDefault(); scrollTo(l.id); }}
+                >
+                  {l.label}
+                </a>
+              ))}
               <h4 style={{ marginTop: 24, marginBottom: 10 }}>Schwerpunkte</h4>
               <Link href="/hausarzt-duebendorf" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Hausarzt Dübendorf</Link>
               <Link href="/leistungen/notfallpraxis-walk-in" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Walk-in Notfallpraxis</Link>
-              
-              <div style={{
-                maxHeight: showAllSchwerpunkte ? '280px' : '0px',
-                overflow: 'hidden',
-                transition: 'max-height 0.3s ease, opacity 0.25s ease',
-                opacity: showAllSchwerpunkte ? 1 : 0,
-              }}>
-                <Link href="/hausarzt-stettbach" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Hausarzt Stettbach</Link>
-                <Link href="/check-up-fahreignung-duebendorf" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Check-up & Fahreignung</Link>
-                <Link href="/leistungen/urologie" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Urologische Sprechstunde</Link>
-                <Link href="/leistungen/naturmedizin" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Naturmedizin & Infusionen</Link>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setShowAllSchwerpunkte(!showAllSchwerpunkte)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  padding: '6px 0',
-                  color: 'var(--teal-light, #3ca1de)',
-                  fontFamily: 'inherit',
-                  fontSize: 12,
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 6,
-                  transition: 'opacity 0.2s',
-                }}
-                onMouseOver={(e) => { e.currentTarget.style.opacity = '0.75'; }}
-                onMouseOut={(e) => { e.currentTarget.style.opacity = '1'; }}
-              >
-                <span>{showAllSchwerpunkte ? '– Weniger anzeigen' : '+ Weitere anzeigen'}</span>
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  style={{
-                    transform: showAllSchwerpunkte ? 'rotate(180deg)' : 'rotate(0deg)',
-                    transition: 'transform 0.25s ease',
-                  }}
-                >
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
-              </button>
+              <Link href="/hausarzt-stettbach" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Hausarzt Stettbach</Link>
+              <Link href="/check-up-fahreignung-duebendorf" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Check-up &amp; Fahreignung</Link>
+              <Link href="/leistungen/urologie" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Urologische Sprechstunde</Link>
+              <Link href="/leistungen/naturmedizin" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Naturmedizin &amp; Infusionen</Link>
+              <Link href="/team/awad-abuawad" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Dipl. Arzt Awad Abuawad</Link>
+              <Link href="/team/saskia-rodriguez" className="footerLink" style={{ display: 'block', textDecoration: 'none' }}>Dr. med. Saskia Rodriguez</Link>
             </div>
 
             {/* Col 3 – Leistungen (clickable!) */}

@@ -59,9 +59,16 @@
   transform: scale(1.1);
 }
 
-.navbar {
+header[role="banner"] {
   position: sticky;
   top: 0;
+  z-index: 9999;
+  width: 100%;
+  background: var(--white);
+}
+
+.navbar {
+  position: relative;
   z-index: 1000;
   background: var(--white);
   transition: all .3s ease;
@@ -2708,26 +2715,58 @@
   }
 }
 
-/* ── Global Focus Indicators for Accessibility ── */
+/* ── Accessible Focus Indicators (Keyboard navigation only via :focus-visible) ── */
 button:focus-visible,
 .btn:focus-visible,
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid var(--teal-light);
+a:focus-visible {
+  outline: 2px solid var(--teal-light);
   outline-offset: 2px;
 }
 
-/* Fallback for older browsers */
-button:focus,
-.btn:focus,
-a:focus,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
 input:focus,
 select:focus,
 textarea:focus {
   outline: 2px solid var(--teal-light);
-  outline-offset: 2px;
+  outline-offset: 1px;
+}
+
+/* Eliminate lingering focus outline / circle on mouse clicks and taps */
+:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+.btn:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+.navLink:focus:not(:focus-visible),
+.mobileMenuBtn:focus:not(:focus-visible),
+.topBarSocial a:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Instant active press effect that returns to normal immediately on release */
+.btn:active,
+.btnPrimary:active {
+  transform: translateY(1px) scale(0.98);
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navLink:active {
+  opacity: 0.75;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mobileMenuBtn:active {
+  transform: scale(0.92);
+  outline: none !important;
+}
+
+.topBarSocial a:active {
+  transform: scale(0.92);
+  outline: none !important;
 }
 
 /* ── DOM Optimization: Modal Images ── */
