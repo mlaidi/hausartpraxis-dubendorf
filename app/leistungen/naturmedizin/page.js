@@ -189,6 +189,13 @@ export default function NaturmedizinPage() {
       </p>
 
       <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
+        Ganzheitliche Naturheilkunde, Schmerztherapie &amp; Akupunktur-Beratung
+      </h2>
+      <p style={{ lineHeight: '1.75', fontSize: '1.05rem', color: '#4b5563', marginBottom: '1.5rem' }}>
+        Als ganzheitliche Hausarztpraxis verknüpfen wir moderne Evidenzmedizin mit bewährter Naturheilkunde und komplementären Ansätzen. Bei chronischer Erschöpfung, muskulären Verspannungen, Rückenschmerzen oder funktionellen Beschwerden bieten wir Ihnen eine fundierte ärztliche Schmerztherapie sowie Beratung zu Akupunktur und naturheilkundlichen Begleitbehandlungen.
+      </p>
+
+      <h2 style={{ fontSize: '1.65rem', color: '#005b4f', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-dm-serif), serif' }}>
         Medizinischer Ablauf, Diagnostik &amp; Individuelle Beratung
       </h2>
       <p style={{ lineHeight: '1.75', fontSize: '1.05rem', color: '#4b5563', marginBottom: '2rem' }}>

@@ -73,18 +73,24 @@ export const metadata = {
     ],
     apple: [
       { url: "/apple-icon.png", sizes: "192x192", type: "image/png" },
+      { url: "/apple-touch-icon.png", sizes: "192x192", type: "image/png" },
     ],
     shortcut: ["/favicon.ico"],
   },
   keywords: [
     "Hausarzt Dübendorf",
+    "Hausarztpraxis Dübendorf",
+    "Arzt Dübendorf",
+    "Gemeinschaftspraxis Dübendorf",
     "Permanence Dübendorf",
     "Notfall Arzt Dübendorf",
+    "Arzt ohne Termin Dübendorf",
     "Walk-in Praxis Dübendorf",
     "Hausarzt Samstag geöffnet",
-    "Allgemeinmedizin Dübendorf",
-    "Dr. Awad Abuawad",
-    "Dr. Saskia Rodriguez",
+    "Dr. Koller Dübendorf",
+    "Dipl. Arzt Awad Abuawad",
+    "Dr. med. Saskia Rodriguez",
+    "Hausarzt Stettbach",
   ],
 };
 
@@ -114,6 +120,7 @@ const clinicSchema = {
   "image": "https://hausarztpraxis-duebendorf.ch/og-image.jpg",
   "description": "Ihre Hausarztpraxis, Permanence Walk-in Notfallpraxis und medizinisches Versorgungszentrum in Dübendorf (8600) an der Leepüntstrasse 5. Ihr Doktor und Arzt in der Nähe für Allgemeinmedizin, Urologie, eigene Praxisapotheke und Notfälle ohne Termin – auch am Samstag geöffnet.",
   "telephone": "+41 44 820 10 20",
+  "alternateTelephone": "+41 44 820 10 12",
   "email": "praxis-duebendorf@hin.ch",
   "acceptsPatients": true,
   "areaServed": [
@@ -190,31 +197,17 @@ const clinicSchema = {
   "employee": [
     {
       "@type": "Physician",
-      "@id": "https://hausarztpraxis-duebendorf.ch/#fedi-farah",
-      "name": "Dr. Fedi Farah",
-      "jobTitle": "Hausarzt / Allgemeinmedizin",
-      "url": "https://hausarztpraxis-duebendorf.ch/#team"
-    },
-    {
-      "@type": "Physician",
       "@id": "https://hausarztpraxis-duebendorf.ch/#awad-abuawad",
-      "name": "Dr. A. Abuawad",
-      "jobTitle": "Hausarzt / Allgemeinmedizin",
-      "url": "https://hausarztpraxis-duebendorf.ch/#team"
+      "name": "Dipl. Arzt Awad Abuawad",
+      "jobTitle": "Praktischer Arzt / Leitung",
+      "url": "https://hausarztpraxis-duebendorf.ch/team/awad-abuawad"
     },
     {
       "@type": "Physician",
       "@id": "https://hausarztpraxis-duebendorf.ch/#saskia-rodriguez",
-      "name": "Dr. Saskia Rodriguez",
-      "jobTitle": "Hausärztin",
-      "url": "https://hausarztpraxis-duebendorf.ch/#team"
-    },
-    {
-      "@type": "Physician",
-      "@id": "https://hausarztpraxis-duebendorf.ch/#dr-mariem",
-      "name": "Dr. Mariem",
-      "jobTitle": "Hausärztin",
-      "url": "https://hausarztpraxis-duebendorf.ch/#team"
+      "name": "Dr. med. (RO) Saskia Rodriguez",
+      "jobTitle": "Praktische Ärztin / Leitung",
+      "url": "https://hausarztpraxis-duebendorf.ch/team/saskia-rodriguez"
     }
   ],
   "medicalService": [
@@ -229,142 +222,43 @@ const clinicSchema = {
   ]
 };
 
-// 2. Physicians — all 4 doctors
+// 2. Physicians
 const doctorsSchema = [
   {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "@id": "https://hausarztpraxis-duebendorf.ch/#fedi-farah",
-    "name": "Fedi Farah",
-    "jobTitle": "Diplomierter Arzt für Allgemeinmedizin",
-    "description": "Hausarzt in Dübendorf. Engagierter Allgemeinmediziner mit Schwerpunkt auf individuelle und ganzheitliche Betreuung.",
-    "image": "https://hausarztpraxis-duebendorf.ch/images/team/Dr Fedi Farah.webp",
-    "url": "https://hausarztpraxis-duebendorf.ch",
-    "medicalSpecialty": "GeneralPractice",
-    "worksFor": { "@id": "https://hausarztpraxis-duebendorf.ch/#clinic" },
-    "address": { "@type": "PostalAddress", "streetAddress": "Leepuntstrasse 5", "addressLocality": "Dübendorf", "postalCode": "8600", "addressCountry": "CH" },
-    "telephone": "+41 44 820 10 20"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
     "@id": "https://hausarztpraxis-duebendorf.ch/#awad-abuawad",
-    "name": "A. Abuawad",
+    "name": "Dipl. Arzt Awad Abuawad",
     "jobTitle": "Diplomierter Arzt für Allgemeinmedizin",
-    "description": "Hausarzt in Dübendorf. Über 20 Jahre Erfahrung in der Allgemeinmedizin. Schwerpunkte: ganzheitliche Betreuung, Prävention, Diagnostik.",
+    "description": "Hausarzt in Dübendorf an der Leepüntstrasse 5. Über 20 Jahre Erfahrung in der Grundversorgung. Schwerpunkte: ganzheitliche Betreuung, Prävention, Diagnostik.",
     "image": "https://hausarztpraxis-duebendorf.ch/images/team/Dr. Awad.webp",
-    "url": "https://hausarztpraxis-duebendorf.ch",
+    "url": "https://hausarztpraxis-duebendorf.ch/team/awad-abuawad",
     "medicalSpecialty": "GeneralPractice",
     "worksFor": { "@id": "https://hausarztpraxis-duebendorf.ch/#clinic" },
-    "address": { "@type": "PostalAddress", "streetAddress": "Leepuntstrasse 5", "addressLocality": "Dübendorf", "postalCode": "8600", "addressCountry": "CH" },
+    "address": { "@type": "PostalAddress", "streetAddress": "Leepüntstrasse 5", "addressLocality": "Dübendorf", "postalCode": "8600", "addressCountry": "CH" },
     "telephone": "+41 44 820 10 20",
+    "alternateTelephone": "+41 44 820 10 12",
     "knowsLanguage": ["de", "ar"]
   },
   {
     "@context": "https://schema.org",
     "@type": "Physician",
     "@id": "https://hausarztpraxis-duebendorf.ch/#saskia-rodriguez",
-    "name": "Saskia Rodriguez",
+    "name": "Dr. med. (RO) Saskia Rodriguez",
     "jobTitle": "Diplomierte Ärztin für Allgemeinmedizin",
-    "description": "Ärztin in Dübendorf. Schwerpunkte: Frauengesundheit, Prävention. Individueller Behandlungsansatz.",
+    "description": "Ärztin in Dübendorf an der Leepüntstrasse 5. Schwerpunkte: Frauengesundheit, Prävention und mehrsprachige Grundversorgung.",
     "image": "https://hausarztpraxis-duebendorf.ch/images/team/Dr. Saskia.webp",
-    "url": "https://hausarztpraxis-duebendorf.ch",
+    "url": "https://hausarztpraxis-duebendorf.ch/team/saskia-rodriguez",
     "medicalSpecialty": "GeneralPractice",
     "worksFor": { "@id": "https://hausarztpraxis-duebendorf.ch/#clinic" },
-    "address": { "@type": "PostalAddress", "streetAddress": "Leepuntstrasse 5", "addressLocality": "Dübendorf", "postalCode": "8600", "addressCountry": "CH" },
+    "address": { "@type": "PostalAddress", "streetAddress": "Leepüntstrasse 5", "addressLocality": "Dübendorf", "postalCode": "8600", "addressCountry": "CH" },
     "telephone": "+41 44 820 10 20",
+    "alternateTelephone": "+41 44 820 10 12",
     "knowsLanguage": ["de", "en", "fr", "es", "ro"]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "@id": "https://hausarztpraxis-duebendorf.ch/#dr-mariem",
-    "name": "Mariem",
-    "jobTitle": "Diplomierte Ärztin für Allgemeinmedizin",
-    "description": "Ärztin in Dübendorf. Kompetente und einfühlsame Betreuung aller Altersgruppen. Schwerpunkt: Prävention.",
-    "image": "https://hausarztpraxis-duebendorf.ch/images/team/Dr Mariem.webp",
-    "url": "https://hausarztpraxis-duebendorf.ch",
-    "medicalSpecialty": "GeneralPractice",
-    "worksFor": { "@id": "https://hausarztpraxis-duebendorf.ch/#clinic" },
-    "address": { "@type": "PostalAddress", "streetAddress": "Leepuntstrasse 5", "addressLocality": "Dübendorf", "postalCode": "8600", "addressCountry": "CH" },
-    "telephone": "+41 44 820 10 20"
   }
 ];
 
-// 3. FAQPage — rich snippets
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Welche Leistungen bietet die Hausarztpraxis in Dübendorf?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Unsere Praxis bietet umfassende Allgemeinmedizin: EKG, digitales Röntgen, Spirometrie, eigenes Labor, hauseigene Apotheke, Urologie, Eiseninfusionen, Ohrenspülung, Check-ups & Atteste, PRP-Eigenbluttherapie und Naturmedizin & Longevity (NAD+, Vitamin C, Glutathion, Ozon-Therapie, PEMF, Burnout-Behandlung, Long-Covid-Therapie, Hormonoptimierung)." }
-    },
-    {
-      "@type": "Question",
-      "name": "Nimmt die Praxis in Dübendorf neue Patienten an?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir nehmen neue Patientinnen und Patienten auf. Sie können direkt online einen Termin buchen oder uns telefonisch unter 044 820 10 20 kontaktieren." }
-    },
-    {
-      "@type": "Question",
-      "name": "Wo befindet sich die Hausarztpraxis in Dübendorf?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Unsere Praxis befindet sich an der Leepuntstrasse 5, 8600 Dübendorf. Gut erreichbar mit öffentlichen Verkehrsmitteln und mit Parkplätzen in der Nähe." }
-    },
-    {
-      "@type": "Question",
-      "name": "Wann hat die Praxis geöffnet?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Unsere Öffnungszeiten: Montag, Dienstag, Donnerstag und Samstag 09:00–13:00 und 14:00–18:00. Mittwoch und Freitag geschlossen." }
-    },
-    {
-      "@type": "Question",
-      "name": "Bietet die Praxis Urologie an?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten fachärztliche urologische Diagnostik und Therapie bei Erkrankungen der Nieren und Harnwege direkt in unserer Praxis an, mit hauseigenem Ultraschall und Labor." }
-    },
-    {
-      "@type": "Question",
-      "name": "Hat die Praxis ein eigenes Labor?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ja, unser In-House-Labor ermöglicht umgehende Auswertungen von Blut- und Urinproben. Wir bieten auch HIV-Schnelltests und genetische Abklärungen an. Viele Ergebnisse liegen in wenigen Minuten vor." }
-    },
-    {
-      "@type": "Question",
-      "name": "Was ist Naturmedizin & Longevity?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Unser Naturmedizin & Longevity Programm umfasst moderne Infusionstherapien: NAD+, Vitamin-C-Hochdosis, Glutathion, Eisen, Aminosäuren, Ozon-Eigenbluttherapie, PRP, Peptidtherapie, PEMF-Therapie, Mikronährstofftherapie, Burnout-Behandlung, Long-Covid-Therapie und Hormonoptimierung." }
-    },
-    {
-      "@type": "Question",
-      "name": "Kann ich Medikamente direkt in der Praxis erhalten?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ja, unsere hauseigene Apotheke ermöglicht die direkte Medikamentenabgabe nach der Konsultation. Bestellungen nehmen wir auch per Telefon oder E-Mail an praxis-duebendorf@hin.ch entgegen." }
-    },
-    {
-      "@type": "Question",
-      "name": "Welche Krankenkassen werden in der Praxis akzeptiert?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Wir akzeptieren alle Schweizer Krankenkassen (Grundversicherung KVG) sowie Zusatzversicherungen. Bitte bringen Sie Ihre Versicherungskarte zur Konsultation mit. Bei Fragen kontaktieren Sie uns unter 044 820 10 20." }
-    },
-    {
-      "@type": "Question",
-      "name": "Behandelt die Praxis Notfälle ohne Termin?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ja, als Permanence behandeln wir Notfälle auch ohne Termin während unserer Öffnungszeiten (Mo, Di, Do, Sa: 09:00–13:00 und 14:00–18:00). Für dringende Fälle außerhalb der Öffnungszeiten wenden Sie sich bitte an den ärztlichen Notfalldienst oder 144." }
-    },
-    {
-      "@type": "Question",
-      "name": "Welche Sprachen spricht das Praxisteam?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Unser mehrsprachiges Team spricht Deutsch, Arabisch, Englisch, Spanisch und Französisch. So können wir Patientinnen und Patienten aus verschiedenen Kulturen komfortabel betreuen." }
-    },
-    {
-      "@type": "Question",
-      "name": "Wie komme ich zur Hausarztpraxis in Dübendorf?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Unsere Praxis befindet sich an der Leepuntstrasse 5, 8600 Dübendorf – gut erreichbar mit S-Bahn (Bahnhof Stettbach, 5 Minuten) und Bus. Parkplätze sind in der Nähe verfügbar." }
-    },
-    {
-      "@type": "Question",
-      "name": "Bietet die Praxis Online-Terminbuchung an?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Ja, Sie können Ihren Termin bequem online buchen. Besuchen Sie unsere Website und klicken Sie auf 'Termin buchen'. Alternativ erreichen Sie uns telefonisch unter 044 820 10 20 während der Öffnungszeiten." }
-    }
-  ]
-};
-
-// 4. WebSite Schema (für Sitelinks-Suchfeld)
+// 3. WebSite Schema (für Sitelinks-Suchfeld)
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -373,20 +267,6 @@ const webSiteSchema = {
   "url": "https://hausarztpraxis-duebendorf.ch",
   "inLanguage": "de-CH",
   "publisher": { "@id": "https://hausarztpraxis-duebendorf.ch/#clinic" }
-};
-
-// 5. BreadcrumbList Schema
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://hausarztpraxis-duebendorf.ch"
-    }
-  ]
 };
 
 export default function RootLayout({ children }) {
@@ -400,9 +280,7 @@ export default function RootLayout({ children }) {
         <meta name="google-site-verification" content="9wmTYpxeLxDDxqCHWLdWPRAbZrIR7hp51DD1jQ-yxe8" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(doctorsSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <link rel="preload" as="image" href="/images/banner-640w.webp" fetchPriority="high" media="(min-width: 901px)" />
       </head>
       <body className={`${dmSerifDisplay.variable} ${inter.variable} ${playfairDisplay.variable} ${sourceSans3.variable}`}>

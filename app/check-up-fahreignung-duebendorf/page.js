@@ -128,6 +128,9 @@ export default function CheckUpFahreignungPage() {
         <li style={{ marginBottom: '0.75rem' }}>
           <strong>Stufe 2 – Berufschauffeure & Höhere Kategorien:</strong> Untersuchungen für Lenkerinnen und Lenker der Kategorien C, C1 (Lastwagen), D, D1 (Busse und Kleinbusse) sowie berufsmässiger Personentransport (BPT / Taxi). Umfassende Abklärung inklusive EKG und spezifischen Laborparametern.
         </li>
+        <li style={{ marginBottom: '0.75rem' }}>
+          <strong>Hinweis zu Stufe 3 &amp; Stufe 4:</strong> In unserer Hausarztpraxis Dübendorf führen wir verkehrsmedizinische Kontrolluntersuchungen der Stufe 1 und Stufe 2 durch. Benötigen Sie ein Gutachten für verkehrsmedizinische Abklärungen der Stufe 3 oder Stufe 4 (z.B. behördliche Gutachten oder verkehrspsychologische Beurteilungen), verweisen wir Sie gerne an die akkreditierten verkehrsmedizinischen Fachstellen im Kanton Zürich.
+        </li>
       </ul>
 
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: "Hausarzt Dübendorf | Hausarztpraxis & Grundversorgung",
-  description: "Ihre Hausarztpraxis in Dübendorf für die ganze Familie: Allgemeinmedizin, Vorsorge, Notfälle ohne Termin & Walk-in. Neue Patienten herzlich willkommen.",
+  title: "Hausarzt Dübendorf | Hausarztpraxis Leepünt (Nachfolge Dr. Koller)",
+  description: "Ihre Hausarztpraxis in Dübendorf an der Leepüntstrasse 5 (Nachfolge Dr. med. Koller). Grundversorgung, Walk-in ohne Termin & Samstagsöffnung. Jetzt Termin buchen.",
   alternates: {
     canonical: "/hausarzt-duebendorf",
   },
@@ -143,6 +143,19 @@ export default function HausarztDuebendorfPage() {
           height={380}
           style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
         />
+      </div>
+
+      {/* ── Praxisnachfolge Dr. Michael Koller Dübendorf ── */}
+      <div style={{ backgroundColor: '#f0fdf4', border: '1.5px solid #bbf7d0', borderRadius: '12px', padding: '1.5rem 1.75rem', margin: '2rem 0 2.5rem' }}>
+        <h2 style={{ fontSize: '1.35rem', color: '#166534', margin: '0 0 0.75rem', fontFamily: 'var(--font-playfair), serif' }}>
+          Praxisnachfolge Dr. med. Michael Koller Dübendorf – Leepüntstrasse 5
+        </h2>
+        <p style={{ fontSize: '1rem', lineHeight: '1.7', color: '#14532d', margin: 0 }}>
+          Die Hausarztpraxis Dübendorf führt die medizinische Grundversorgung am geschätzten Traditionsstandort der ehemaligen <strong>Praxis Dr. med. Michael Koller</strong> an der Leepüntstrasse 5 nahtlos weiter. Bestehende Patientinnen und Patienten von Dr. Koller sowie alle Neupatienten aus Dübendorf, Stettbach und Umgebung sind bei unserem engagierten Ärzteteam in den besten Händen. Ihre bisherige Patientendokumentation wird unter Einhaltung strengster Datenschutzstandards verlässlich weitergeführt.
+        </p>
+        <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: '#15803d', marginTop: '0.75rem', marginBottom: 0 }}>
+          📞 <strong>Kontakt &amp; Telefon:</strong> Sie erreichen uns telefonisch unter <strong>044 820 10 20</strong> (vormals 044 820 10 12) oder buchen Ihren Sprechstundentermin direkt online.
+        </p>
       </div>
 
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>

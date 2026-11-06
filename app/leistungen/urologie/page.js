@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Urologie Dübendorf | Urologische Abklärung & Sprechstunde",
-  description: "Urologie in Dübendorf: Diagnostik von Niere, Blase und Prostata mit Ultraschall & Sofortlabor. Schnelle Sprechstundentermine ohne lange Wartezeit.",
+  title: "Urologie & Urologe Dübendorf | Urologische Abklärung & Sprechstunde",
+  description: "Urologie in Dübendorf: Diagnostik von Niere, Blase und Prostata mit Ultraschall & Sofortlabor. Sprechstunde & Urologe Termine ohne lange Wartezeit.",
   alternates: {
     canonical: "/leistungen/urologie",
   },
@@ -108,7 +108,7 @@ export default function UrologiePage() {
       )}
 
       <p style={{ fontSize: '1.15rem', lineHeight: '1.75', color: '#374151', marginBottom: '2rem', fontWeight: '500' }}>
-        Erkrankungen des Harntrakts und der Geschlechtsorgane erfordern eine einfühlsame, diskrete und medizinisch fundierte Abklärung. In der Hausarztpraxis Dübendorf bieten wir Ihnen eine umfassende urologische Grundabklärung für Frauen und Männer an. Dank unserer modernen Praxisausstattung mit hochauflösendem Ultraschall und vollwertigem In-House-Labor klären wir Beschwerden zügig und präzise vor Ort ab – ohne lange Wartezeiten auf externe Facharzttermine.
+        Erkrankungen des Harntrakts und der Geschlechtsorgane erfordern eine einfühlsame, diskrete und medizinisch fundierte Abklärung. Suchen Sie einen Urologen in Dübendorf oder eine spezialisierte urologische Sprechstunde? In der Hausarztpraxis Dübendorf bieten wir Ihnen eine umfassende urologische Diagnostik für Frauen und Männer an. Dank unserer modernen Praxisausstattung mit hochauflösendem Ultraschall und vollwertigem In-House-Labor klären wir Beschwerden zügig und präzise vor Ort ab – ohne monatelange Wartezeiten auf externe Facharzttermine.
       </p>
 
       <h2 style={{ fontSize: '1.6rem', color: '#111827', marginTop: '2.5rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif' }}>

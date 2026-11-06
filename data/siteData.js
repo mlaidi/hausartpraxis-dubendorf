@@ -146,8 +146,10 @@ export const SERVICES = [
 export const TEAM = [
   {
     name: "Dipl. Arzt Awad Abuawad",
+    slug: "awad-abuawad",
+    href: "/team/awad-abuawad",
     role: "Praktischer Arzt",
-	roleDetail: "Allgemeinmedizin FMH Leitung Jerumed",
+    roleDetail: "Allgemeinmedizin FMH Leitung Jerumed",
     initials: "AA",
     photo: "/images/team/Dr. Awad.webp",
     photoSrcSet: "/images/team/Dr. Awad-240w.webp 240w, /images/team/Dr. Awad-360w.webp 360w, /images/team/Dr. Awad.webp 480w",
@@ -155,9 +157,11 @@ export const TEAM = [
     languages: "Deutsch, Arabisch",
   },
   {
-    name: "Dr. med. (RO) Saskia Rodriguez ",
-    role: "Praktischer Ärztin",
-	roleDetail: "Allgemeinmedizin Leitung Jerumed",
+    name: "Dr. med. (RO) Saskia Rodriguez",
+    slug: "saskia-rodriguez",
+    href: "/team/saskia-rodriguez",
+    role: "Praktische Ärztin",
+    roleDetail: "Allgemeinmedizin Leitung Jerumed",
     initials: "SR",
     photo: "/images/team/Dr. Saskia.webp",
     photoSrcSet: "/images/team/Dr. Saskia-240w.webp 240w, /images/team/Dr. Saskia-360w.webp 360w, /images/team/Dr. Saskia.webp 480w",
