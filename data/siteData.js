@@ -187,7 +187,7 @@ export const FOOTER_SERVICES = [
 ];
 
 export const FOOTER_PARTNERS = [
-  { label: "Jerumed Shop", link: "https://www.jerumed.com/"},
+  { label: "Jerumed Shop", link: "https://jerumed.com" },
   { label: "Praxen Jerumed", link: "https://praxen-jerumed.ch/en"},
   { label: "Praxis Altstetten", link: "https://www.praxis-altstetten.ch/"},
   { label: "Ästhetische Medizin", link: "https://www.med-esthec.ch" },

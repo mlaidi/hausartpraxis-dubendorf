@@ -3,3 +3,6 @@ node_modules/
 *.log
 tmp/
 scratch/
+
+.env*
+.DS_Store
